@@ -1,0 +1,53 @@
+[
+  {
+    "objectID": "cheatSheet.html",
+    "href": "cheatSheet.html",
+    "title": "Cheat Sheet Quarto CLI",
+    "section": "",
+    "text": "Comando\nDescripción\n\n\n\n\nquarto create-project .\nCrea un proyecto nuevo en la carpeta actual\n\n\nquarto render\nRenderiza el proyecto completo\n\n\nquarto render archivo.qmd\nRenderiza un archivo específico\n\n\nquarto render archivo.qmd --to pdf\nRenderiza un archivo a PDF\n\n\nquarto preview\nPrevisualiza el proyecto localmente\n\n\nquarto publish gh-pages\nPublica en GitHub Pages\n\n\nquarto clean\nLimpia archivos temporales y _site/\n\n\nquarto install extension nombre\nInstala una extensión de Quarto\n\n\nquarto list extensions\nLista las extensiones instaladas\n\n\nquarto uninstall extension nombre\nElimina una extensión\n\n\nquarto help\nMuestra la ayuda general\n\n\nquarto --version\nMuestra la versión de Quarto instalada",
+    "crumbs": [
+      "Cheat Sheet"
+    ]
+  },
+  {
+    "objectID": "cheatSheet.html#resumen-rápido-de-quarto",
+    "href": "cheatSheet.html#resumen-rápido-de-quarto",
+    "title": "Cheat Sheet Quarto CLI",
+    "section": "",
+    "text": "Comando\nDescripción\n\n\n\n\nquarto create-project .\nCrea un proyecto nuevo en la carpeta actual\n\n\nquarto render\nRenderiza el proyecto completo\n\n\nquarto render archivo.qmd\nRenderiza un archivo específico\n\n\nquarto render archivo.qmd --to pdf\nRenderiza un archivo a PDF\n\n\nquarto preview\nPrevisualiza el proyecto localmente\n\n\nquarto publish gh-pages\nPublica en GitHub Pages\n\n\nquarto clean\nLimpia archivos temporales y _site/\n\n\nquarto install extension nombre\nInstala una extensión de Quarto\n\n\nquarto list extensions\nLista las extensiones instaladas\n\n\nquarto uninstall extension nombre\nElimina una extensión\n\n\nquarto help\nMuestra la ayuda general\n\n\nquarto --version\nMuestra la versión de Quarto instalada",
+    "crumbs": [
+      "Cheat Sheet"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FullStack",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "06-documentacion/index.html",
+    "href": "06-documentacion/index.html",
+    "title": "Documentación y notas",
+    "section": "",
+    "text": "How to learn:\n\nActive\nDoing\nOrder"
+  },
+  {
+    "objectID": "06-documentacion/index.html#section",
+    "href": "06-documentacion/index.html#section",
+    "title": "Documentación y notas",
+    "section": "",
+    "text": "How to learn:\n\nActive\nDoing\nOrder"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
