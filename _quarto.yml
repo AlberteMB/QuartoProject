@@ -1,0 +1,43 @@
+project:
+  type: website
+
+website:
+  sidebar:
+    title: "Apuntes FullStack"
+    search: true
+    contents:
+      - text: "Introducción"
+        href: index.qmd
+        
+      - text: "Spring Boot" 
+        href: 01-spring-boot/index.qmd
+
+      - text: "React"    
+        href: 02-react/index.qmd 
+ 
+      - text: "APIs"  
+        href: 03-api/index.qmd
+
+      - text: Bases de datos   
+        href: 04-bases-datos/index.qmd
+
+      - text: "Tests"  
+        href: 05-tests/index.qmd
+
+      - text: "Documentación"
+        href: 06-documentacion/index.qm
+ 
+      - text: "Cheat Sheet"
+        href: cheatSheet.qmd
+       
+  page-footer:
+    center: "© 2024 Alberte - Apuntes de Desarrollo Web"
+
+format:
+  html:
+    theme: darkly  # https://quarto.org/docs/output-formats/html-themes.html
+    css: styles.css
+    toc: true      # Tabla de contenido automática
+    mainfont: "Helvetica"
+    breadcrumbs: true
+

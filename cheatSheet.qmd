@@ -1,0 +1,18 @@
+# Cheat Sheet Quarto CLI
+
+## 🚀 Resumen Rápido de Quarto
+
+| **Comando**                          | **Descripción**                             |
+|--------------------------------------|---------------------------------------------|
+| `quarto create-project .`            | Crea un proyecto nuevo en la carpeta actual |
+| `quarto render`                      | Renderiza el proyecto completo              |
+| `quarto render archivo.qmd`          | Renderiza un archivo específico             |
+| `quarto render archivo.qmd --to pdf` | Renderiza un archivo a PDF                  |
+| `quarto preview`                     | Previsualiza el proyecto localmente         |
+| `quarto publish gh-pages`            | Publica en GitHub Pages                     |
+| `quarto clean`                       | Limpia archivos temporales y `_site/`       |
+| `quarto install extension nombre`    | Instala una extensión de Quarto             |
+| `quarto list extensions`             | Lista las extensiones instaladas            |
+| `quarto uninstall extension nombre`  | Elimina una extensión                       |
+| `quarto help`                        | Muestra la ayuda general                    |
+| `quarto --version`                   | Muestra la versión de Quarto instalada      |
