@@ -28,5 +28,7 @@ title: "GENERAL"
 - Distribución de ingresos equitativa 
 - Comunidades pequeñas
 :::
+---
+## Idea de proyecto
+- 'Cards' de React. [MUI-React](https://mui.com/material-ui/react-card/)
 
-## SCRUM

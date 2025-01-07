@@ -6,7 +6,7 @@ website:
     title: "Apuntes FullStack"
     search: true
     contents:
-      - text: "Introducción"
+      - text: "General"
         href: index.qmd
         
       - text: "Spring Boot" 
@@ -40,4 +40,10 @@ format:
     toc: true      # Tabla de contenido automática
     mainfont: "Helvetica"
     breadcrumbs: true
+  
+
+
+
+    
+    
 

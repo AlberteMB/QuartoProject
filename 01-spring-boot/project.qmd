@@ -1,0 +1,75 @@
+# Project
+## Classes
+
+## UML (Mermaid)
+
+``` {mermaid}
+classDiagram
+    class Word {
+        +text: String
+        +pronunciation: String
+        +audio: Audio
+        +exampleSentences: List~String~
+        +tags: List~Tag~
+        +favorite: boolean
+        +getText(): String
+        +getPronunciation(): String
+        +getAudio(): Audio
+        +getTags(): List~Tag~
+    }
+
+    class User {
+        +id: UUID
+        +username: String
+        +email: String
+        +progress: Progress
+        +dateRegistration: Date
+        +points: int
+        +favoriteWords: List~Word~
+        +addWord(word: Word): void
+        +getSavedWords(): List~Word~
+        +getProgress(): Progress
+    }
+
+    class Tag {
+        +name: String
+        +getName(): String
+    }
+
+    class Audio {
+        +url: String
+        +duration: Double
+        +getURL(): String
+        +getDuration(): Double
+    }
+
+    class Progress {
+        +user: User
+        +completedWords: List~Word~
+        +getCompletedWords(): List~Word~
+        +addCompletedWord(word: Word): void
+    }
+
+    class Flashcard {
+        +word: Word
+        +translation: String
+        +getWord(): Word
+        +getTranslation(): String
+    }
+
+    class Quiz {
+        +user: User
+        +questions: List~Flashcard~
+        +generateQuiz(user: User): List~Flashcard~
+        +getResults(): String
+    }
+
+    User "1" --> "1" Progress : "has"
+    User "1" --> "*" Word : "saves"
+    Word "*" --> "*" Tag : "has"
+    Word "1" --> "1" Audio : "has"
+    Progress "*" --> "*" Word : "tracks"
+    User "1" --> "*" Quiz : "participates in"
+    Quiz "*" --> "*" Flashcard : "contains"
+    Flashcard "1" --> "1" Word : "is based on"
+```
