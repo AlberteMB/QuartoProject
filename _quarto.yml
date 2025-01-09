@@ -9,8 +9,14 @@ website:
       - text: "General"
         href: index.qmd
         
-      - text: "Spring Boot" 
-        href: 01-spring-boot/index.qmd
+       text: "Spring Boot"
+        contents: 
+          - text: "Introducción"
+            href: 01-spring-boot/index.qmd
+          - text: "UML"
+            href: 01-spring-boot/uml.qmd
+          - text: "Request-Response Cycle"
+            href: 01-spring_boot/request-response-cycle.qmd  
 
       - text: "React"    
         href: 02-react/index.qmd 

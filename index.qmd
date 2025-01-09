@@ -6,7 +6,9 @@ title: "GENERAL"
 ---
 
 ### 1. Spring boot
-   1.1.
+   1.1. Index
+   1.2. UML
+   1.3. Request-Response Cycle
 ### 2. React
    2.1.
 ### 3. API
@@ -30,5 +32,7 @@ title: "GENERAL"
 :::
 ---
 ## Idea de proyecto
+- App para aprender inglés por medio de tarjetas con división de la palabra por sílabas, un botón para ejecutar un audio que reproducirá la palabra mientras cada sílaba se irá poniendo en negrita según avanza. Otro botón para, a través del micro, poder pronunciar nosotros una palabra y que, por medio de IA, nos corrija la pronunciación. Dispondrá de una puntuación en la pronunciación, lista de palabras favoritas, quiz, ejemplos en frases y evaluación continua.
+
 - 'Cards' de React. [MUI-React](https://mui.com/material-ui/react-card/)
 

@@ -1,7 +1,5 @@
-# Project
-## Classes
-
-## UML (Mermaid)
+# UML
+## Mermaid
 
 ``` {mermaid}
 classDiagram
