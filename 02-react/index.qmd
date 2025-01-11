@@ -1,2 +1,29 @@
 # React
-## 
+## Create project
+
+1. Install Node.js:
+2. Create project with Vite:
+``` bash
+npm create vite@latest nombre-del-proyecto --template react
+```
+3. Go to project's directory.
+4. Install dependencies:
+``` bash
+npm install
+```
+5. Inizialize developing server
+``` bash
+npm run dev
+```
+6. Config project:
+    - Vite.config.js
+    - vite.config.ts
+    - src folder
+7. Build for production
+``` bash
+npm run Build
+```
+8. Preview
+``` bash
+npm run preview
+```

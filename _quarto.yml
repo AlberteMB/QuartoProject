@@ -7,35 +7,31 @@ website:
     search: true
     contents:
       - text: "General"
-        href: index.qmd
-        
-       text: "Spring Boot"
+        href: index.qmd        
+      - text: "Spring Boot"
         contents: 
           - text: "Introducción"
             href: 01-spring-boot/index.qmd
           - text: "UML"
-            href: 01-spring-boot/uml.qmd
+            href: 01-spring-boot/.qmd
           - text: "Request-Response Cycle"
-            href: 01-spring_boot/request-response-cycle.qmd  
-
+            href: 01-spring-boot/request-response-cycle.qmd  
       - text: "React"    
         href: 02-react/index.qmd 
- 
       - text: "APIs"  
         href: 03-api/index.qmd
-
-      - text: Bases de datos   
-        href: 04-bases-datos/index.qmd
-
+      - text: "Bases de datos"   
+        contents:
+          - text: "Introducción"
+            href: 04-bases-datos/index.qmd
+          - text: "SQL"
+            href: 04-bases-datos/sql.qmd
       - text: "Tests"  
         href: 05-tests/index.qmd
-
       - text: "Documentación"
-        href: 06-documentacion/index.qm
- 
+        href: 06-documentacion/index.qmd
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
-       
   page-footer:
     center: "© 2024 Alberte - Apuntes de Desarrollo Web"
 
@@ -46,10 +42,3 @@ format:
     toc: true      # Tabla de contenido automática
     mainfont: "Helvetica"
     breadcrumbs: true
-  
-
-
-
-    
-    
-
