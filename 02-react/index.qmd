@@ -44,3 +44,10 @@ El "POM" de React se llama package.json
 Los datos van hacia abajo y los events hacia arriba
 !(Eventos y datos){images/react_data_events.png}
 :::
+
+## Export / Import
+| **Sintaxis**       | **Sentencia export**                    | **Sentencia import**                     |
+|--------------------|-----------------------------------------|------------------------------------------|
+| **Por defecto**    | `export default function Button() {}`  | `import Button from './Button.js';`      |
+| **Con nombre**     | `export function Button() {}`          | `import { Button } from './Button.js';`  |
+

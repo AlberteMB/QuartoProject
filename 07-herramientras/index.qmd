@@ -1,4 +1,8 @@
 # Tools
 ## Git y GitHub
 ---
-## 
+## Mono repo
+- Crear 2 folders (Spring + React)
+- Ambos gestionados por npm.
+- Se ejecuta un `package.json` ***(script)*** que llama a ambos proyectos.
+- Instalar concurrenty
