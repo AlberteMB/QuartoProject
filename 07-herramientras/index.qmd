@@ -6,3 +6,11 @@
 - Ambos gestionados por npm.
 - Se ejecuta un `package.json` ***(script)*** que llama a ambos proyectos.
 - Instalar concurrenty
+---
+## git stash (comando)
+    - El comando **git stash** toma tus cambios no comprometidos (tanto los realizados como los no realizados), los guarda para su uso posterior, y luego los revierte desde tu copia de trabajo. 
+    - Es como si se guardase en memoria cache.
+    - No es recomendable trabajar siempre con stash.
+---
+## git worktree
+    
