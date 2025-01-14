@@ -28,7 +28,7 @@ npm run Build
 npm run preview
 ```
 ::: {# Dependencias en React .callout-tip}
-El "POM" de React se llama package.json
+El "POM" de React se llama package.json. Maven sería npm.
 :::
 
 ## Posibles errores: Guía
@@ -40,7 +40,7 @@ El "POM" de React se llama package.json
  6. Data and "model"
  7. Router, navigation
 
- ::: {# Datos y eventos.callout-tip}
+ ::: {# Datos y eventos .callout-tip}
 Los datos van hacia abajo y los events hacia arriba
 !(Eventos y datos){images/react_data_events.png}
 :::
@@ -50,4 +50,15 @@ Los datos van hacia abajo y los events hacia arriba
 |--------------------|-----------------------------------------|------------------------------------------|
 | **Por defecto**    | `export default function Button() {}`  | `import Button from './Button.js';`      |
 | **Con nombre**     | `export function Button() {}`          | `import { Button } from './Button.js';`  |
+
+## Ciclo de RENDER
+### Tres fases en el ciclo de render
+ - Fase de trigger (Trigger externo, de reloj, etc)
+ - Fase de render 
+ - Fase de commit o pintado por pantalla
+
+::: {# El renderizado tiene que tener un calculo puro .callout-note}
+- Mismos inputs que outputs.
+- Se basa en su propia lógica de negocio.
+:::
 

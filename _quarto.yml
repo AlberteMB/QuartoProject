@@ -30,6 +30,8 @@ website:
         href: 05-tests/index.qmd
       - text: "Documentación"
         href: 06-documentacion/index.qmd
+      - text: "Herramientas"
+        href: 07-herramientras/index.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
   page-footer:
