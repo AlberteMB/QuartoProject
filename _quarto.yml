@@ -31,7 +31,7 @@ website:
       - text: "Documentación"
         href: 06-documentacion/index.qmd
       - text: "Herramientas"
-        href: 07-herramientras/index.qmd  
+        href: 07-herramientras/index-tools.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
   page-footer:
