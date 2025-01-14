@@ -63,3 +63,7 @@ Los datos van hacia abajo y los events hacia arriba
 - Se basa en su propia lógica de negocio.
 :::
 
+## Props
+- Desestructuración 'Avatar ({ person, size })'
+- Reenviar todas las props con sintaxis de propagación JSX <Avatar {...props} />
+- Children : <Card> <Avatar /> </Card> . Avatar aparecerá como children del componente Card.
