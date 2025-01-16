@@ -12,3 +12,4 @@
 ***Se usan en último lugar después de que se hayan aplicado otras cláusulas.***
 **LIMIT** num_limit
 **OFFSET** num_offset
+

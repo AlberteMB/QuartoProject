@@ -13,7 +13,7 @@ website:
           - text: "Introducción"
             href: 01-spring-boot/index.qmd
           - text: "UML"
-            href: 01-spring-boot/.qmd
+            href: 01-spring-boot/uml.qmd
           - text: "Request-Response Cycle"
             href: 01-spring-boot/request-response-cycle.qmd  
       - text: "React"    
@@ -26,6 +26,8 @@ website:
             href: 04-bases-datos/index.qmd
           - text: "SQL"
             href: 04-bases-datos/sql.qmd
+          - text: "PostgreSQL"
+            href: 04-bases-datos/postgresql.qmd  
       - text: "Tests"  
         href: 05-tests/index.qmd
       - text: "Documentación"

@@ -6,3 +6,7 @@
 # Relationship
 # Queries
 # Inherence
+
+::: En cada comentario  ::: {.callout-important}
+What? What for? Why? 
+:::

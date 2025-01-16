@@ -1,0 +1,62 @@
+# PostgreSQL
+## Crear nueva PostgreSQL
+
+``` bash
+CREATE DATABASE nombre_base_datos;
+CREATE USER nombre_usuario WITH PASSWORD 'tu_contraseña';
+ALTER ROLE nombre_usuario SET client_encoding TO 'utf8';
+ALTER ROLE nombre_usuario SET default_transaction_isolation TO 'read committed';
+ALTER ROLE nombre_usuario SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE nombre_base_datos TO nombre_usuario;
+```
+## Configuration in project
+### In application.properties
+``` bash
+spring.datasource.url=jdbc:postgresql://localhost:5432/nombre_base_datos
+spring.datasource.username=nombre_usuario
+spring.datasource.password=tu_contraseña
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Configuración de JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+```
+### In application.yml
+``` yaml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nombre_base_datos
+    username: nombre_usuario
+    password: tu_contraseña
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+```
+# Comandos básicos de PostgreSQL
+
+| **Acción**                  | **Comando**                                                                                  | **Descripción**                                                        |
+|-----------------------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| **Iniciar sesión**          | `sudo -u postgres psql`                                                                       | Accede a PostgreSQL como usuario `postgres`.                          |
+|                             | `psql -U <usuario> -d <base_de_datos>`                                                       | Accede con un usuario específico.                                     |
+| **Ver bases de datos**      | `\l`                                                                                         | Lista todas las bases de datos.                                       |
+| **Conectar a una base**     | `\c <nombre_de_la_base>`                                                                     | Conéctate a una base de datos específica.                             |
+| **Crear base de datos**     | `CREATE DATABASE <nombre>;`                                                                  | Crea una nueva base de datos.                                         |
+| **Eliminar base de datos**  | `DROP DATABASE <nombre>;`                                                                    | Elimina una base de datos existente.                                  |
+| **Ver tablas**              | `\dt`                                                                                       | Muestra las tablas en la base de datos actual.                        |
+| **Crear tabla**             | `CREATE TABLE <nombre> (id SERIAL PRIMARY KEY, columna1 VARCHAR(50), columna2 INTEGER);`     | Crea una tabla nueva.                                                 |
+| **Eliminar tabla**          | `DROP TABLE <nombre>;`                                                                      | Elimina una tabla existente.                                          |
+| **Consultar datos**         | `SELECT * FROM <tabla>;`                                                                    | Muestra el contenido de una tabla.                                    |
+| **Insertar datos**          | `INSERT INTO <tabla> (columna1, columna2) VALUES ('valor1', 100);`                           | Inserta datos en una tabla.                                           |
+| **Actualizar datos**        | `UPDATE <tabla> SET columna1 = 'nuevo_valor' WHERE id = 1;`                                 | Actualiza datos en una tabla.                                         |
+| **Eliminar datos**          | `DELETE FROM <tabla> WHERE id = 1;`                                                         | Elimina datos de una tabla.                                           |
+| **Crear usuario**           | `CREATE USER <usuario> WITH PASSWORD '<contraseña>';`                                       | Crea un nuevo usuario en PostgreSQL.                                  |
+| **Conceder permisos**       | `GRANT ALL PRIVILEGES ON DATABASE <base_de_datos> TO <usuario>;`                            | Concede permisos de acceso a un usuario.                              |
+| **Eliminar usuario**        | `DROP USER <usuario>;`                                                                      | Elimina un usuario existente.                                         |
+| **Salir de PostgreSQL**     | `\q`                                                                                        | Cierra la consola de PostgreSQL.                                      |
+| **Ver esquema de tabla**    | `\d <nombre_de_la_tabla>`                                                                   | Muestra la estructura de una tabla.                                   |
+| **Ayuda general**           | `\?`                                                                                        | Lista comandos y opciones disponibles.                                |
+| **Información de conexión** | `\conninfo`                                                                                 | Muestra detalles de la conexión actual.                               |
