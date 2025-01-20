@@ -16,8 +16,14 @@ website:
             href: 01-spring-boot/uml.qmd
           - text: "Request-Response Cycle"
             href: 01-spring-boot/request-response-cycle.qmd  
-      - text: "React"    
-        href: 02-react/index.qmd 
+      - text: "React"   
+        contents:  
+          - text: "Introducción"
+            href: 02-react/index.qmd 
+          - text: "Components"
+            href: 02-react/components.qmd  
+          - text: "Hooks"
+            href: 02-react/hooks.qmd            
       - text: "APIs"  
         href: 03-api/index.qmd
       - text: "Bases de datos"   

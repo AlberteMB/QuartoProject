@@ -1,0 +1,29 @@
+- Cómo ha evolucionado MVC.
+- MVC para web.
+- Explicación detallada
+
+- Al realizar un test creando un objeto en la DB, por qué después no aparece ese objeto en la DB cuando la abro?
+
+- Mock-server.md en rama master.
+- Git Workktree
+
+Pasos proyecto React:
+- Postman
+- Instalar Jest
+- Controlar componentes
+- Iniciar con Vite
+- Axios
+- Instalar: Material UI todas las herramientas
+- useState / useEffect: Hooks
+- Deploy
+
+
+- As an english student, I want to learn how to pronunce properly using flashcards, so that I can improve my vocabulary.
+
+- As a user, I want to check my statistics about words and progress, so that I have a clear understanding of my improvement.
+
+- As an English learner, I want to take quizzes on the words I have studied, so that I can test my knowledge and reinforce my learning.
+
+
+
+- React tree Instalar

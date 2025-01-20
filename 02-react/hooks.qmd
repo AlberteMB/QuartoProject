@@ -1,0 +1,5 @@
+# Hooks
+## useState
+- Controla el estado.
+## useEffect
+- Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincronizándose con un trigger concreto (Actulizando la web, reloj, botón, API...).

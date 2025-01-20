@@ -67,3 +67,6 @@ Los datos van hacia abajo y los events hacia arriba
 - Desestructuración 'Avatar ({ person, size })'
 - Reenviar todas las props con sintaxis de propagación JSX <Avatar {...props} />
 - Children : <Card> <Avatar /> </Card> . Avatar aparecerá como children del componente Card.
+
+## Proceso desde Postman a Render
+Postman(Mock) -> endpoint -> axios.get (crea{JSON}) -> useEffect ({JSON})-> useState[DATA] -> data.map -> RENDER
