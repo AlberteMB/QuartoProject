@@ -1,12 +1,26 @@
 ## Para jueves
-- Cómo ha evolucionado MVC.
-- MVC para web.
-- Explicación detallada
-- Qué es DB, JPA y MVC.
-- Al realizar un test creando un objeto en la DB, por qué después no aparece ese objeto en la DB cuando la abro?
+1. Cómo ha evolucionado MVC.
+    - Origenes 70-80. 
+    - En los 2000 hubo cambios clave: Controlador maneja peticiones HTTP. La vista se genera en servidor y se enviaba HTML/CSS al cliente.
+    - Se introducen las capas servicios y repos.
+    - Separación de Frontend/Backend en los 2010.
+    - Actualidad: Microservicios. 
+
+2. Qué es DB, JPA y MVC.
+    - **Data Base:** Consiste en una tabla o serie de tablas (formadas por filas y columnas) donde se guardaran información de todo tipo. Estas tablas son accesibles por medio de peticiones llamadas Queries.
+    - **JPA:** Es un asistente que te ayuda a trabajar con las bases de datos sin escribir tantas queries manualmente. Tiene como unas plantillas básicas para trabajar con SQL.
+    - **MVC:** Es un patrón de diseño que funciona con 3 partes. Modelo (guarda y gestiona info), Vista (Es lo que ve el usuario), Controlador (Recibe las acciones del usario, las envía y actualiza la vista.)
+
+3. Al realizar un test creando un objeto en la DB, por qué después no aparece ese objeto en la DB cuando la abro?
+    - Spring boot, por defecto, utiliza una estrategia que no persiste los datos en la DB. Esto hace que los datos sólo existen mientras se hace el test al usar una DB en memoria.
+    - Se puede forzar a que los guarde.
+    - @Transactional: Spring Boot hace rollback automático al realizar una prueba con esta anotación.
+    - @Commit: Si realizo test con esta anotación, se guardarán.
+    - Algunas configs permiten ejecutar tests en entornos aislados (Docker), lo que hace que no se reflejen en la base de datos.
+
 ## Para viernes
 -  Que es SCRUM Master. Week 4
-
+    
 ---
 
 - Mock-server.md en rama master.
