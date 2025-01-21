@@ -1,0 +1,92 @@
+# Seguridad:
+
+### JWT + OAuth2:
+
+### PROS:
+
+1. **Stateless:** No necesita almacenar sesiones en el backend.
+
+2. **Escalable:** Al no necesitar una DB.
+
+3. **Flexibilidad:** Se puede usar con API RESTful y se integra en microservicios.
+
+4. **Experiencia de usuario:** Opción de elegir el método de acceso.
+
+5. **Portabilidad:** Almacenar el token en localStorage o cookies seguras.
+   
+   ### Contras:
+
+1. **Revocación compleja:** Si un token se compromete, no se puede invalidar fácilmente sin una estrategia adicional (lista negra, expiración corta, etc.)
+
+2. **Tamaño:** Los tokens pueden ser grandes, lo que afecta al rendimiento.
+
+3. **Seguridad en almacenamiento:** Guardar JWT en `localStorage` puede ser peligroso (ataques `XSS`), por lo que se recomienda usar `httpOnly`.
+
+
+
+## UML:
+
+classDiagram
+``` {mermaid}
+---
+title: "Diagrama de Clases - Festival App"
+format: html
+---
+
+classDiagram
+
+    class User {
+        Long id
+        String username
+        String email
+        String password
+        List<Festival> favoriteFestivals
+    }
+
+    class Festival {
+        Long id
+        String name
+        String description
+        LocalDate startDate
+        LocalDate endDate
+        String location
+        Double latitude
+        Double longitude
+        List<Category> categories
+    }
+
+    class Category {
+        Long id
+        String name
+        List<Festival> festivals
+    }
+
+    class MapLocation {
+        Long id
+        Festival festival
+        Double latitude
+        Double longitude
+        String googleMapsLink
+    }
+
+    class UserFestival {
+        Long id
+        User user
+        Festival festival
+        LocalDate savedAt
+        enum Status
+        String notes
+    }
+
+    User "1" -- "*" Festival : favoriteFestivals
+    Festival "*" -- "*" Category : categories
+    Festival "1" -- "1" MapLocation : location
+    User "1" -- "*" UserFestival : attends
+    Festival "1" -- "*" UserFestival : attendedBy
+```
+
+### Notas:
+
+1. Duplicidad en la ubicación en Festival y MapLocation: Se suele añadir así para tener una ubicación general y, después otras ubicaciones más concretas para diferentes puntos del festival. Mejora el acceso a la base de datos a una ubicación general. Habría que tenerlas sincronizada para evitar inconsistencias.
+
+2. Clase UserFestival como tabla intermedia entre User y Festival.

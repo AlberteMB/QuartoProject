@@ -18,12 +18,9 @@ Pasos proyecto React:
 - Deploy
 
 
-- As an english student, I want to learn how to pronunce properly using flashcards, so that I can improve my vocabulary.
-
-- As a user, I want to check my statistics about words and progress, so that I have a clear understanding of my improvement.
-
-- As an English learner, I want to take quizzes on the words I have studied, so that I can test my knowledge and reinforce my learning.
-
-
-
 - React tree Instalar
+
+ ## Notas PRA#01-React
+- En app.jsx añadir la componente user.
+- Usar Filter para dificultad (Esta en React.dev).
+- 
