@@ -24,6 +24,13 @@ title: "GENERAL"
 
 # Notas
 
+## Commit codes:
+- `doc:` Documentación tipo resources
+- `proj:` Management como scripts y demás.
+- `pra:` Prácticas.
+- `feat:` Código de proyecto (Creando un controller, query, service...)
+- `fix:` Corrección de errores.
+
 ## Pareto 
 - Regla 80/20. El 80% de los resultados provienen del 20% de las causas.
 

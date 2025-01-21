@@ -26,20 +26,20 @@ website:
             href: 02-react/hooks.qmd            
       - text: "APIs"  
         href: 03-api/index.qmd
-      - text: "Bases de datos"   
+      - text: "Data Bases"   
         contents:
           - text: "Introducción"
-            href: 04-bases-datos/index.qmd
+            href: 04-data-base/index.qmd
           - text: "SQL"
-            href: 04-bases-datos/sql.qmd
+            href: 04-data-base/sql.qmd
           - text: "PostgreSQL"
-            href: 04-bases-datos/postgresql.qmd  
+            href: 04-data-base/postgresql.qmd  
       - text: "Tests"  
         href: 05-tests/index.qmd
-      - text: "Documentación"
-        href: 06-documentacion/index.qmd
-      - text: "Herramientas"
-        href: 07-herramientras/index-tools.qmd  
+      - text: "Documentation"
+        href: 06-documentation/index.qmd
+      - text: "Tools"
+        href: 07-tools/index-tools.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
   page-footer:

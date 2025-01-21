@@ -1,13 +1,18 @@
+## Para jueves
 - Cómo ha evolucionado MVC.
 - MVC para web.
 - Explicación detallada
-
+- Qué es DB, JPA y MVC.
 - Al realizar un test creando un objeto en la DB, por qué después no aparece ese objeto en la DB cuando la abro?
+## Para viernes
+-  Que es SCRUM Master. Week 4
+
+---
 
 - Mock-server.md en rama master.
 - Git Workktree
 
-Pasos proyecto React:
+## Pasos proyecto React:
 - Postman
 - Instalar Jest
 - Controlar componentes
@@ -18,9 +23,8 @@ Pasos proyecto React:
 - Deploy
 
 
-- React tree Instalar
-
  ## Notas PRA#01-React
 - En app.jsx añadir la componente user.
 - Usar Filter para dificultad (Esta en React.dev).
+- En el último commit de `frontend-react` está el `axios` desacoplado. REVISAR
 - 

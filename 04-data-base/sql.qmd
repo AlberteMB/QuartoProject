@@ -1,0 +1,97 @@
+# SQL
+## SQL Bolt notes
+## Statements:
+
+1. **SELECT** `column, anothercolumn`: Elección de la columna o columnas.
+2. **FROM** `table` : Señala la tabla.
+3. **WHERE** : Condiciones de selección.
+
+| Operator            | Condition                                   | SQL Example                     |
+|--------------------|---------------------------------------------|---------------------------------|
+| =, !=, <, <=, >, >= | Standard numerical operators               | `col_name != 4`                 |
+| BETWEEN … AND …    | Number is within range of two values (inclusive) | `col_name BETWEEN 1.5 AND 10.5` |
+| NOT BETWEEN … AND …| Number is not within range of two values (inclusive) | `col_name NOT BETWEEN 1 AND 10` |
+| IN (…)             | Number exists in a list                     | `col_name IN (2, 4, 6)`          |
+| NOT IN (…)         | Number does not exist in a list             | `col_name NOT IN (1, 3, 5)`      |
+
+| Operator  | Condition                                                     | Example                                      |
+|-----------|---------------------------------------------------------------|----------------------------------------------|
+| =         | Case sensitive exact string comparison (notice the single equals) | `col_name = "abc"`                          |
+| != or <>  | Case sensitive exact string inequality comparison              | `col_name != "abcd"`                        |
+| LIKE      | Case insensitive exact string comparison                       | `col_name LIKE "ABC"`                        |
+| NOT LIKE  | Case insensitive exact string inequality comparison            | `col_name NOT LIKE "ABCD"`                    |
+| %         | Matches zero or more characters (with LIKE or NOT LIKE)        | `col_name LIKE "%AT%"` <br> *(matches "AT", "ATTIC", "CAT", "BATS")* |
+| _         | Matches a single character (with LIKE or NOT LIKE)             | `col_name LIKE "AN_"` <br> *(matches "AND", but not "AN")* |
+| IN (…)    | String exists in a list                                        | `col_name IN ("A", "B", "C")`                 |
+| NOT IN (…) | String does not exist in a list                               | `col_name NOT IN ("D", "E", "F")`             |
+
+4. **SELECT DISTINCT** `column`: Elimina las filas duplicadas.
+5. **ORDER BY `column` ASC/DESC**: La columna elegida será ordenada alfanuméricamente.
+6. **LIMIT**: Limita el número de filas a devolver.
+7. **OFFSET**: Especifica desde donde empieza a contar para numerar las filas.
+
+8. **INNER JOIN** `table`: También escrito `JOIN`. Para emparejar filas de la primera y segunda table que tengan la misma `KEY`, definida por `ON` para crear una fila de resultado con las columnas combinadas.
+9. **ON**: Junto con `INNERJOIN`. 
+
+- *En caso de tener datos asimétricos en ambas tablas debemos usar:*
+10. **LEFT JOIN** `another_table`: Al unir tabla A y B, simplemente incluye filas de la A independientemente de si se encuenta una fila coincidente en B.
+11. **RIGHT JOIN** `another_table`: Al unir tabla A y B, simplemente incluye filas de la B independientemente de si se encuenta una fila coincidente en A.
+12. **FULL JOIN** `another_table` : Se mantienen fila de ambas tablas independientemente de si existe una fila coincidente en otra tabla.
+
+13. **WHERE `column` IS/IS NOT NULL**: Condición que agrega o ignora los resultados con `NULL`.
+14. **SELECT `col_expresion` AS `expr_description`**: Ejemplo: **SELECT** `particle_speed / 2.0` **AS** `half_particle_speed`
+15. **SELECT** `AGG_FUNC`(`column_or_expression`) AS `aggregate_description, …`**: 
+
+| Function              | Description                                                                                                   |
+|----------------------|---------------------------------------------------------------------------------------------------------------|
+| `COUNT(*)`, `COUNT(column)` | Counts the number of rows in the group if no column name is specified. Otherwise, counts the number of rows in the group with non-NULL values in the specified column. |
+| `MIN(column)`           | Finds the smallest numerical value in the specified column for all rows in the group.                        |
+| `MAX(column)`           | Finds the largest numerical value in the specified column for all rows in the group.                         |
+| `AVG(column)`           | Finds the average numerical value in the specified column for all rows in the group.                         |
+| `SUM(column)`           | Finds the sum of all numerical values in the specified column for the rows in the group.                     |
+
+
+16. **GROUP BY *column***: Agrupará columnas con el mismo valor en caso de repetirse.
+17. **HAVING**: Funciona igual que `WHERE` pero tras haber usado `GROUP BY`.
+18. **ORDER OF EXECUTION**
+    1. FROM and JOIN
+    2. WHERE
+    3. GROUP BY
+    4. HAVING
+    5. SELECT
+    6. DISTINCT
+    7. ORDER BY
+    8. LIMIT / OFFSET
+
+19. **INSERT INTO *table* (*column, another_column*)**
+    **VALUES**: Insertamos nuevas columnas y valores en las mismas. Tener en cuenta los tipos de datos.
+20. **UPDATE *TABLE***
+    **SET** `column = value_or_expr`
+    **WHERE** `codition`: Actualiza el valor de un dato en una columna concreta y que cumpla la condición (`id, name, etc`).
+21. **DELETE FROM** `table`
+    **WHERE** `condition`: Borra una serie de filas según la  condición previa. 
+22. **CREATE TABLE IF NOT EXISTS** `table` (`column DataType DEFAULT default_value, another...`)**: Crea una tabla con unas columnas con su tipo de ddato y valores por defecto o asignados.
+
+| Constraint      | Description                                                                                                                                   |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| `PRIMARY KEY`   | Values in this column are unique and can be used to identify a single row in the table.                                                       |
+| `AUTOINCREMENT` | For integer values, the value is automatically filled and incremented with each row insertion. Not supported in all databases.                |
+| `UNIQUE`        | Ensures values in this column are unique, preventing duplicate entries. Unlike `PRIMARY KEY`, it does not have to be a key for a row.         |
+| `NOT NULL`      | Ensures the inserted value cannot be `NULL`.                                                                                                  |
+| `CHECK(expression)` | Allows complex expressions to validate inserted values, such as ensuring values are positive, greater than a threshold, or match a pattern. |
+| `FOREIGN KEY`   | Ensures each value in this column corresponds to another value in a column of another table, maintaining referential integrity.                |
+
+
+
+
+23. **ALTER TABLE** `table`
+    **ADD** `column` `DataType OptionalTableContraint`
+    **DEFAULT** `default_value`: Añadir una columna a una tabla existente.     
+24. **DROP TABLE IF EXISTS** `table`: Borra una tabla entera.
+
+**Data types in SQL**:
+    - INTEGER, BOOLEAN
+    - FLOAT, DOUBLE, REAL
+    - CHAR(num_chars),VARCHAR(num_chars), TEXT.
+    - DATE, DATETIME
+    - BLOB
