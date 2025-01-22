@@ -5,28 +5,18 @@
 ### PROS:
 
 1. **Stateless:** No necesita almacenar sesiones en el backend.
-
 2. **Escalable:** Al no necesitar una DB.
-
 3. **Flexibilidad:** Se puede usar con API RESTful y se integra en microservicios.
-
 4. **Experiencia de usuario:** Opción de elegir el método de acceso.
-
 5. **Portabilidad:** Almacenar el token en localStorage o cookies seguras.
    
    ### Contras:
-
 1. **Revocación compleja:** Si un token se compromete, no se puede invalidar fácilmente sin una estrategia adicional (lista negra, expiración corta, etc.)
-
 2. **Tamaño:** Los tokens pueden ser grandes, lo que afecta al rendimiento.
-
 3. **Seguridad en almacenamiento:** Guardar JWT en `localStorage` puede ser peligroso (ataques `XSS`), por lo que se recomienda usar `httpOnly`.
-
-
 
 ## UML:
 
-classDiagram
 ``` {mermaid}
 ---
 title: "Diagrama de Clases - Festival App"
@@ -90,3 +80,21 @@ classDiagram
 1. Duplicidad en la ubicación en Festival y MapLocation: Se suele añadir así para tener una ubicación general y, después otras ubicaciones más concretas para diferentes puntos del festival. Mejora el acceso a la base de datos a una ubicación general. Habría que tenerlas sincronizada para evitar inconsistencias.
 
 2. Clase UserFestival como tabla intermedia entre User y Festival.
+
+## User stories:
+1. Como usuario quiero encontrar fiestas recomendadas según mi rango de edad e intereses, para poder disfrutar de eventos acordes a mis preferencias.
+2. Como usuario quiero guardar eventos en mi perfil y recibir recordatorios personalizados para no perderme ninguna fiesta importante.
+3. Como usuario quiero visualizar ubicaciones de interés cercanas (parkings, transporte público, hoteles) para planificar mejor mi asistencia a las fiestas.
+4. Como usuario quiero que me digan las bandas u orquestas para tener más información.
+5. Como usuario quiero poder compartir información con el resto de usuarios de la app para recomendar cosas relacionadas con el evento.
+6. Como usuario quiero abrir la ubicación del evento en mi aplicación de mapas preferida para llegar fácilmente con un solo clic.
+7. Como usuario quiero poder tener un nivel de confianza en cuanto a recomendaciones en determinadas fiestas puntuable por el resto de usuarios para ganar ciertas ventajas en un futuro, además de nivel de usuario en la APP.
+8. Como hostelero quiero salir como recomendación de mi local si pago una pequeña cantidad a la app para tener más visibilidad en la APP.
+9. Como hostelero quiero poder ofrecer ofertas directamente a quien venga con la app para beneficiarse los usuarios de app y yo.
+10. Como extranjero quiero poder buscar la información básica al menos en inglés para ser más accesible.
+11. Como usuario quiero poder ver opiniones y comentarios de otros asistentes sobre las fiestas, para conocer experiencias reales antes de asistir.
+12. Como usuario quiero poder filtrar fiestas por categoría (música, gastronomía, cultura, etc.), para encontrar las que mejor se adapten a mis intereses.
+13. Como organizador quiero tener estadísticas sobre el número de visitas y búsquedas de mi evento para evaluar su impacto.
+14. Como usuario quiero recibir notificaciones de última hora sobre cancelaciones o cambios de eventos para estar siempre informado.
+15. Como usuario quiero poder descargar eventos a mi calendario personal, para gestionar mejor mi planificación.
+16. Como catalán exijo que esté en catalán u os tiro un adoquín de la calle a la cabeza.
