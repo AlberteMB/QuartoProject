@@ -41,4 +41,9 @@
 - En app.jsx añadir la componente user.
 - Usar Filter para dificultad (Esta en React.dev).
 - En el último commit de `frontend-react` está el `axios` desacoplado. REVISAR
+
+- Qué es un wrapper, collection y container??
+- ResponseEntity y Optional.
+- List, Hashmaps, Treeset, Queue, vector. 
+- Postman ver vídeo picnic.
 - 
