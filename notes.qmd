@@ -46,4 +46,8 @@
 - ResponseEntity y Optional.
 - List, Hashmaps, Treeset, Queue, vector. 
 - Postman ver vídeo picnic.
-- 
+
+- Servlet. Picnic
+- ID compuestas. Picnic
+- JPQL: Lenguaje SQL de JPA para queries en oneliner.
+

@@ -10,15 +10,17 @@ website:
         href: index.qmd        
       - text: "Spring Boot"
         contents: 
-          - text: "Introducción"
+          - text: "Introduction"
             href: 01-spring-boot/index.qmd
+          - text: "Annotations"
+            href: 01-spring-boot/annotations.qmd  
           - text: "UML"
             href: 01-spring-boot/uml.qmd
           - text: "Request-Response Cycle"
             href: 01-spring-boot/request-response-cycle.qmd  
       - text: "React"   
         contents:  
-          - text: "Introducción"
+          - text: "Introduction"
             href: 02-react/index.qmd 
           - text: "Components"
             href: 02-react/components.qmd  
@@ -28,7 +30,7 @@ website:
         href: 03-api/index.qmd
       - text: "Data Bases"   
         contents:
-          - text: "Introducción"
+          - text: "Introduction"
             href: 04-data-base/index.qmd
           - text: "SQL"
             href: 04-data-base/sql.qmd
