@@ -18,9 +18,6 @@
     - @Commit: Si realizo test con esta anotación, se guardarán.
     - Algunas configs permiten ejecutar tests en entornos aislados (Docker), lo que hace que no se reflejen en la base de datos.
 
-## Para viernes
--  Que es SCRUM Master. Week 4
-    
 ---
 
 - Mock-server.md en rama master.
@@ -50,4 +47,6 @@
 - Servlet. Picnic
 - ID compuestas. Picnic
 - JPQL: Lenguaje SQL de JPA para queries en oneliner.
+
+## Semana 6
 

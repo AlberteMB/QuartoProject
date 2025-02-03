@@ -2,5 +2,21 @@
 ## useState
 - El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
 ## useEffect
-- El hook useEffect se usa para ejecutar código cuando se renderiza el componente o cuando cambian las dependencias del efecto. 
+- El hook useEffect se usa para ejecutar código cuando se renderiza el componente o cuando cambian las `dependencias` del efecto. 
 Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincronizándose con un trigger concreto (Actulizando la web, reloj, botón, API...).
+    **Dependencias:**
+    1. Con todos los datos.
+    2. Con el state y props.
+    3. Sin datos. Corre solo una vez después del primer render.
+
+## useNavigation
+- Devuelve info sobre el estado de la navegación. Sirve para conocer si la app está cargando una nueva ruta. Útil para mostrar pantallas de carga o deshabilitar botones mientras la navegación está en curso.
+
+## useRef
+- Permite crear referencias a elementos del DOM o valores persistentes sin provocar un re-render.
+
+## useContext
+- 
+
+## useReducer
+- 

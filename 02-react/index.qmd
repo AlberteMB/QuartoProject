@@ -70,3 +70,9 @@ Los datos van hacia abajo y los events hacia arriba
 
 ## Proceso desde Postman a Render
 Postman(Mock) -> endpoint -> axios.get (crea{JSON}) -> useEffect ({JSON})-> useState[DATA] -> data.map -> RENDER
+
+## Router
+- 
+
+## Spread Operator ... 
+- Para trabajar con arrays.Copia rápidamente todo o parte de un array existente.
