@@ -2,4 +2,7 @@
 ## onChange:
 - 
 ## strictMode
-- 
+- Ayuda a identificar problemas potenciales en una app. `<React.StrictMode>`. 
+    1. Ejectuta 2 veces `useEffect, useState, useMemo, etc`. para detectar efectos secundarios no puros.
+    2. Avisa sobre API obsoletas.
+    3. Detectar uso indebido de `ref` y `findDOMNode`.
