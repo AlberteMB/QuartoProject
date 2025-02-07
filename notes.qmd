@@ -49,4 +49,8 @@
 - JPQL: Lenguaje SQL de JPA para queries en oneliner.
 
 ## Semana 6
+- Ventajas e inconvenientes de hacer scroll position con useEffect o useState.
 
+- Continuar práctica Spring Boot con el UML de `pronunciationApp-v0.2-model-1.png`.
+
+- Deep Seek en local

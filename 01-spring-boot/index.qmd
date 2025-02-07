@@ -1,14 +1,24 @@
 # Spring Boot
 ## DTO
-
-## JPA
+- 
+# JPA
+-
 # Mapping
+-
 # Relationship
-# Queries
+-
 # Inherence
+-
 
 ::: En cada comentario  ::: {.callout-important}
-What? What for? Why? 
+What? What for? Why? How? How many (time, money)?
 :::
 ---
 
+# Jerarquía en clases
+- Saber ver qué `clases pivotan` alrededor de otras.
+    - Imprescindible para la funcionalidad
+    - Si otras pueden acomplarse sin perder sentido.
+    - Las otras clases no pueden existir sin ella.
+    - Responder a las preguntas: What, What for, Why, How, How many?
+    - Las clases pivotales siempre están conectadas con el `user story`.
