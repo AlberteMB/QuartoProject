@@ -16,7 +16,56 @@ Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincroniz�
 - Permite crear referencias a elementos del DOM o valores persistentes sin provocar un re-render.
 
 ## useContext
-- 
+- Permite acceder a valores de un contexto sin necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes.
+
+✅ Uso principal: Compartir estados globales (tema, autenticación, idioma, etc.).
+
+``` bash
+const MyContext = React.createContext();
+
+function Parent() {
+  return (
+    <MyContext.Provider value="Hola, mundo">
+      <Child />
+    </MyContext.Provider>
+  );
+}
+
+function Child() {
+  const value = useContext(MyContext);
+  return <p>{value}</p>;
+}
+```
 
 ## useReducer
-- 
+- Es una alternativa a useState, útil para manejar estados complejos con múltiples transiciones.
+
+✅ Uso principal: Estados con lógica avanzada o cuando múltiples acciones afectan el mismo estado.
+
+``` bash 
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    <>
+      <p>Contador: {state.count}</p>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+    </>
+  );
+}
+```
+
+## Combinación `useContext + useReducer`:
+    - Se usa para manejar estados globales de forma eficiente.

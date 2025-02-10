@@ -73,6 +73,44 @@ Postman(Mock) -> endpoint -> axios.get (crea{JSON}) -> useEffect ({JSON})-> useS
 
 ## Router
 - 
+## Objeto literal
+- 
 
-## Spread Operator ... 
-- Para trabajar con arrays.Copia rápidamente todo o parte de un array existente.
+### Crear un objeto literal:
+    - No lleva comillas, al contrario que un JSON.
+``` bash
+const object = {
+                name: name; 
+                age: 4;
+                }
+```
+
+Setea el nuevo estado del re-render que es un objeto nuevo literal que está creando.
+``` bash
+setFormData ((---)) => ({
+
+}))
+```
+---
+## Using {}, [], ()...
+ | Symbol    | Use Case                  | Example                                                   |
+   | --------- | ------------------------- | --------------------------------------------------------- |
+   | `{}`      | Object destructuring      | `const { name, age } = obj;`                              |
+   | `[]`      | Array destructuring       | `const [first, second] = arr;`                            |
+   | `()`      | Function parameters       | `const func = ({ name }) => console.log(name);`           |
+   | No Symbol | Invalid for destructuring | `const name, age = obj;` (This will throw a syntax error) |
+   
+## Explanation   
+   | Syntax Element         | `x => x * x`                      | `(x) => (x * x)`             |
+   | ---------------------- | --------------------------------- | ---------------------------- |
+   | Parameter Parentheses  | Omitted (valid for single params) | Explicitly included          |
+   | Expression Parentheses | Not used                          | Used for grouping (optional) |
+   | Return Behavior        | Implicit return                   | Implicit return              |
+   
+## Implicit or explicit return   
+   | Feature     | Implicit Return                             | Explicit Return                             |
+   | ----------- | ------------------------------------------- | ------------------------------------------- |
+   | Syntax      | No `return` keyword or curly braces needed. | Requires `return` keyword and curly braces. |
+   | Use Case    | Simple one-liner expressions.               | More complex logic or multiline functions.  |
+   | Example     | `const square = x => x * x;`                | `const square = x => { return x * x; };`    |
+   | Readability | Concise and clean for short code.           | Better for clarity in complex logic.        |

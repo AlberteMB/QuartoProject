@@ -34,7 +34,7 @@
 - Deploy
 
 
- ## Notas PRA#01-React
+## Notas PRA01-React
 - En app.jsx añadir la componente user.
 - Usar Filter para dificultad (Esta en React.dev).
 - En el último commit de `frontend-react` está el `axios` desacoplado. REVISAR
@@ -54,3 +54,6 @@
 - Continuar práctica Spring Boot con el UML de `pronunciationApp-v0.2-model-1.png`.
 
 - Deep Seek en local
+
+## Semana 7
+- [Expose local server](https://github.com/AlberteMB/pronunciationApp/blob/master/management/Testing%20and%20Mocking/expose-local-server/expose-local-server.md).`bore, ngrok, localhost.run`- 

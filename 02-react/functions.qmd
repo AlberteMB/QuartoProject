@@ -1,8 +1,35 @@
-# Functions
+# Function and events.
 ## onChange:
-- 
+-`EVENT`:  se usa para capturar cambios en los elementos de entrada (input, textarea, select). Es clave para manejar formularios y actualizar el estado en tiempo real.
+``` bash
+function Form() {
+  const [name, setName] = React.useState("");
+
+  function handleChange(event) {
+    setName(event.target.value);
+  }
+
+  return (
+    <input type="text" value={name} onChange={handleChange} />
+  );
+}
+```
+
 ## strictMode
 - Ayuda a identificar problemas potenciales en una app. `<React.StrictMode>`. 
     1. Ejectuta 2 veces `useEffect, useState, useMemo, etc`. para detectar efectos secundarios no puros.
     2. Avisa sobre API obsoletas.
     3. Detectar uso indebido de `ref` y `findDOMNode`.
+
+## Spread Operator ... 
+- Para trabajar con arrays.Copia rápidamente todo o parte de un array existente.
+
+## Arrow function =>
+    - Forma concisa de escribir una función evitando escribir la palabra function.
+    - Si tiene un solo return, se puede omitir {} y return.
+    - Uso de `{}` cuando hay más de una linea.
+    - Cuándo usar arrows?
+        1. **Callbacks:** map, filter, forEach.
+        2. **Métodos:** onClick, onChange, etc.
+    - Cuándo **NO** usarlos: En métodos de objetos (porque this no funcionará como se espera).
+        

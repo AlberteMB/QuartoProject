@@ -7,4 +7,22 @@
 # @ResponseEntity:
     -
     
+
+# @Autowired: 
+    - En el `Controller` sustituir esto:
+    ``` java
+    @Autowired
+    private UserService userService;
+    ```
+    Por: 
+    ``` java
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+    this.userService = userService;
+    }
+    ```
+
+
+
             
