@@ -60,3 +60,5 @@
 
 - Clases anónimas.
 - Clases anidadas.
+
+- Pronunciation, Word, StageWord, Stage, GameProgress
