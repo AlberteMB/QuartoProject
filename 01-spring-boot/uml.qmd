@@ -1,5 +1,36 @@
 # UML
-## Mermaid
+## ¿Qué es UML?
+
+**UML (Unified Modeling Language)** es un lenguaje gráfico utilizado para especificar, visualizar, construir y documentar los componentes de un sistema de software. Se utiliza principalmente en ingeniería de software para representar el diseño y la arquitectura de sistemas, proporcionando una forma estandarizada de representar los elementos y las relaciones dentro del sistema.
+
+## Características básicas de UML
+
+1. **Visualización clara del sistema**  
+   UML permite representar de manera visual y clara los componentes de un sistema, como clases, objetos, componentes y sus interacciones.
+
+2. **Lenguaje estandarizado**  
+   UML es un lenguaje estándar, lo que significa que puede ser entendido por diferentes equipos y personas en todo el mundo.
+
+3. **Diagramas diversos**  
+   UML incluye varios tipos de diagramas, que se agrupan en dos categorías principales:
+   - **Diagramas estructurales**: muestran la estructura estática del sistema.
+     - **Diagrama de clases**: representa las clases y sus relaciones.
+     - **Diagrama de objetos**: muestra los objetos y sus relaciones en un momento determinado.
+     - **Diagrama de componentes**: muestra los componentes físicos y sus interacciones.
+     - **Diagrama de despliegue**: describe la distribución física de los componentes en hardware.
+   - **Diagramas de comportamiento**: muestran el comportamiento dinámico del sistema.
+     - **Diagrama de casos de uso**: muestra las interacciones entre actores y el sistema.
+     - **Diagrama de secuencia**: describe cómo los objetos interactúan a lo largo del tiempo.
+     - **Diagrama de actividades**: representa el flujo de trabajo dentro del sistema.
+     - **Diagrama de estados**: muestra los diferentes estados de un objeto y cómo cambia entre ellos.
+
+4. **Abstracción y detalle**  
+   UML permite trabajar con diferentes niveles de detalle, desde una visión general del sistema hasta detalles más finos de la implementación.
+
+5. **Facilita la comunicación entre equipos**  
+   Debido a su naturaleza gráfica y estándar, UML facilita la comunicación entre diseñadores, desarrolladores, testers y otros miembros del equipo.
+
+## Ejemplo en Mermaid
 
 ``` {mermaid}
 classDiagram

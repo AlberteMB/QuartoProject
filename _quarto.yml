@@ -18,6 +18,8 @@ website:
             href: 01-spring-boot/uml.qmd
           - text: "Request-Response Cycle"
             href: 01-spring-boot/request-response-cycle.qmd  
+          - text: "Relationships"
+            href: 01-spring-boot/relationship.qmd  
       - text: "React"   
         contents:  
           - text: "Introduction"

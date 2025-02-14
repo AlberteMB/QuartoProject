@@ -57,3 +57,6 @@
 
 ## Semana 7
 - [Expose local server](https://github.com/AlberteMB/pronunciationApp/blob/master/management/Testing%20and%20Mocking/expose-local-server/expose-local-server.md).`bore, ngrok, localhost.run`- 
+
+- Clases anónimas.
+- Clases anidadas.
