@@ -9,8 +9,7 @@ Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincroniz�
     2. Con el state y props.
     3. Sin datos. Corre solo una vez después del primer render.
 
-## useNavigation
-- Devuelve info sobre el estado de la navegación. Sirve para conocer si la app está cargando una nueva ruta. Útil para mostrar pantallas de carga o deshabilitar botones mientras la navegación está en curso.
+
 
 ## useRef
 - Permite crear referencias a elementos del DOM o valores persistentes sin provocar un re-render.
@@ -69,3 +68,104 @@ function Counter() {
 
 ## Combinación `useContext + useReducer`:
     - Se usa para manejar estados globales de forma eficiente.
+
+## useNavagation 
+- Te permite acceder al estado de la navegación actual, lo que es útil para mostrar indicadores de carga o manejar transiciones entre páginas.   
+``` jsx
+import { useNavigation } from "react-router-dom";
+
+const MyComponent = () => {
+  const navigation = useNavigation();
+
+  return (
+    <div>
+      {navigation.state === "loading" && <p>Cargando...</p>}
+      <p>Contenido principal</p>
+    </div>
+  );
+};
+```
+
+
+## useNavigate
+- Te permite navegar programáticamente entre rutas en tu aplicación React. 
+- Saber si una navegación está en curso `(navigation.state puede ser "idle", "loading", o "submitting")`.
+- Mostrar un `spinner` o mensaje de carga mientras se está navegando.
+- Mejorar la UX al evitar clics repetidos en enlaces o botones mientras se carga una nueva página.
+
+``` jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Contact() {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate('/');
+  };
+
+  return (
+    <div>
+      <h2>Contact</h2>
+      <button onClick={goToHome}>Go to Home</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+```
+1. **Router y Routes:** Envolvemos nuestra aplicación en un Router y definimos las rutas usando Routes y Route.
+
+2. **useNavigate:** En el componente Contact, usamos el hook useNavigate para obtener la función navigate. Esta función nos permite navegar a diferentes rutas programáticamente.
+
+3. **Navegación programática:** En el componente Contact, cuando se hace clic en el botón "Go to Home", se llama a la función goToHome, que utiliza navigate('/') para redirigir al usuario a la ruta principal (/).
+
+4. **Links:** Usamos el componente Link para crear enlaces de navegación en la barra de navegación.
+
+### Otros usos:
+- **Navegación con estado:** Puedes pasar un objeto de estado al navegar:
+``` javascript
+navigate('/about', { state: { from: 'contact' } });
+```
+- **Navegación hacia atrás:** Puedes navegar hacia atrás en el historial:
+``` javascript 
+navigate(-1);
+```
+- **Navegación hacia adelante:** Puedes navegar hacia adelante en el historial:
+``` javascript 
+navigate(1);
+```

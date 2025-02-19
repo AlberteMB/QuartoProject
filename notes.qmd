@@ -62,3 +62,7 @@
 - Clases anidadas.
 
 - Pronunciation, Word, StageWord, Stage, GameProgress
+
+## Semana 8
+- En React diferencia entre pasar e invocar (llamar).
+- En React pasamos funciones y no las invocamos.

@@ -27,8 +27,18 @@ npm run Build
 ``` bash
 npm run preview
 ```
-::: {#Dependencias en React .callout-tip}
+::: { .callout-tip}
+## "Dependencias en React"
 El "POM" de React se llama package.json. Maven sería npm.
+:::
+
+::: {.callout-warning}
+## "Arreglar error en npm" 
+ ``` bash
+rm -rf node_modules package-lock.json dist
+npm install
+npm run dev
+```
 :::
 
 ## Posibles errores: Guía
@@ -40,7 +50,8 @@ El "POM" de React se llama package.json. Maven sería npm.
  6. Data and "model"
  7. Router, navigation
 
- ::: {#Datos y eventos .callout-tip}
+::: {.callout-tip}
+ ## "Datos y eventos" 
 Los datos van hacia abajo y los events hacia arriba
 
 ![Eventos y datos](/home/albertemb/FullStack-Quarto/images/react_data_events.png)
