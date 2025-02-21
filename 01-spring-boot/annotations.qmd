@@ -1,14 +1,14 @@
 # Annotations
 
-# @RequestParam:
+## @RequestParam:
     - 
-# @RequestVariable:
+## @RequestVariable:
     - 
-# @ResponseEntity:
+## @ResponseEntity:
     -
     
 
-# @Autowired: 
+## @Autowired: 
     - En el `Controller` sustituir esto:
     ``` java
     @Autowired
@@ -22,7 +22,17 @@
     this.userService = userService;
     }
     ```
-
-
+## @CreatedDate: 
+- 
+## @LastModifiedDate: 
+- 
+## @CreatedBy:
+- 
+## @LastModifiedBy:
+- 
+## @NotNull:
+- 
+## @Size:
+- 
 
             
