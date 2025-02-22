@@ -67,4 +67,6 @@
 - En React diferencia entre pasar e invocar (llamar).
 - En React pasamos funciones y no las invocamos.
 
-- Spring Boot: En las relaciones en @OneToMany, @ManyToOne y @ManyToMany, en la base de datos no se guardan los array. No los veremos si no usamos otro tipo de de anotación.
+- Spring Boot: En las relaciones en @OneToMany, @ManyToOne y @ManyToMany, 
+en la base de datos no se guardan los array. 
+No los veremos si no usamos otro tipo de de anotación. 
