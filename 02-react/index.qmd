@@ -127,7 +127,7 @@ setFormData ((---)) => ({
    | Readability | Concise and clean for short code.           | Better for clarity in complex logic.        |
 
 ::: {.callout-tip}
-## Pasos a seguir en el proceso de crear la web
+## "Pasos a seguir en el proceso de crear la web"
 1. Mock-up (render React).
 2. Trigger (humano y no humano).
 3. Model data (state).
@@ -143,3 +143,16 @@ setFormData ((---)) => ({
 - Handler
 - Modal (useState)
 
+![Estados del formulario](images/responding_to_input_flow.webp)
+
+## Enfoques Declarativo e Imperativo.
+### Declarativo
+- Describé `qué` quieres que suceda en la UI, sin preocuparte por el `cómo` se implementa.
+   - React se encarga de actualizar el DOM basándose en el estado actual.
+   - El código describe cómo debería verse la UI y React se encarga de hacer coincidir el DOM con ello.
+   - Código `más legible` y fácil de mantener.
+### Imperativo
+- Describe `cómo´ hacerlo cada paso. Instrucciones detalladas para manipular el DOM.
+   - Se manipula el DOM manualmente, lo que lleva a código más complejo.
+   - Común en JQuery y JavaScript vanilla.
+   - Código `menos legible` y difícil de mantener.    
