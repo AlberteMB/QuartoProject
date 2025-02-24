@@ -1,6 +1,10 @@
 # Hooks
 ## useState
-- El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
+- El hook useState es utilizado para **crear variables de estado**, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza.
+```j̀sx
+const [state, setState] = useState(valorInicial);
+```
+
 ## useEffect
 - **Sincroniza efecto con una dependencia (variable externa o dependencia).** Para ejecutar código cuando se renderiza el componente o cuando cambian las `dependencias` del efecto. 
 Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincronizándose con un trigger concreto (Actulizando la web, reloj, botón, API...).
@@ -8,18 +12,32 @@ Se pregunta  con quién se sincroniza. Cuántas veces va a ejecutarse sincroniz�
     1. Con todos los datos.
     2. Con el state y props.
     3. Sin datos. Corre solo una vez después del primer render.
-
-
+```jsx
+useEffect(() => {
+  // Código a ejecutar
+  return () => {
+    // Cleanup (opcional)
+  };
+}, [dependencias]);
+```    
 
 ## useRef
 - Permite crear referencias a elementos del DOM o valores persistentes sin provocar un re-render.
+```jsx
+const ref = useRef(valorInicial);
+```
 
+## useMemo
+- Permite hacer caching con los resultados de cálculos intensos entre re-renders. 
+```jsx 
+const cachedValue = useMemo( calculateValue, dependencies);
+```
 ## useContext
-- Permite acceder a valores de un contexto sin necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes.
+- **Compartir estados entre componentes**. Permite acceder a valores de un contexto sin necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes.
 
 ✅ Uso principal: Compartir estados globales (tema, autenticación, idioma, etc.).
 
-``` bash
+```jsx
 const MyContext = React.createContext();
 
 function Parent() {
@@ -37,11 +55,11 @@ function Child() {
 ```
 
 ## useReducer
-- Es una alternativa a useState, útil para manejar estados complejos con múltiples transiciones.
+- Es una alternativa a useState, útil para **manejar estados complejos** con múltiples transiciones.
 
 ✅ Uso principal: Estados con lógica avanzada o cuando múltiples acciones afectan el mismo estado.
 
-``` bash 
+```jsx
 function reducer(state, action) {
   switch (action.type) {
     case "increment":

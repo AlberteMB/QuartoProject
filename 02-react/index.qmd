@@ -125,3 +125,21 @@ setFormData ((---)) => ({
    | Use Case    | Simple one-liner expressions.               | More complex logic or multiline functions.  |
    | Example     | `const square = x => x * x;`                | `const square = x => { return x * x; };`    |
    | Readability | Concise and clean for short code.           | Better for clarity in complex logic.        |
+
+::: {.callout-tip}
+## Pasos a seguir en el proceso de crear la web
+1. Mock-up (render React).
+2. Trigger (humano y no humano).
+3. Model data (state).
+4. Remove. Todo lo sobrante.
+5. Handler.
+:::
+
+## Opciones trás pulsar un botón.
+- Mensaje 
+- Render condicional
+- Nueva página
+- Deshabilitar el botón.
+- Handler
+- Modal (useState)
+

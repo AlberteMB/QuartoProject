@@ -14,7 +14,6 @@ function Form() {
   );
 }
 ```
-
 ## strictMode
 - Ayuda a identificar problemas potenciales en una app. `<React.StrictMode>`. 
     1. Ejectuta 2 veces `useEffect, useState, useMemo, etc`. para detectar efectos secundarios no puros.
