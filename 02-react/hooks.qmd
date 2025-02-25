@@ -32,6 +32,7 @@ const ref = useRef(valorInicial);
 ```jsx 
 const cachedValue = useMemo( calculateValue, dependencies);
 ```
+
 ## useContext
 - **Compartir estados entre componentes**. Permite acceder a valores de un contexto sin necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes.
 

@@ -152,7 +152,7 @@ setFormData ((---)) => ({
    - El código describe cómo debería verse la UI y React se encarga de hacer coincidir el DOM con ello.
    - Código `más legible` y fácil de mantener.
 ### Imperativo
-- Describe `cómo´ hacerlo cada paso. Instrucciones detalladas para manipular el DOM.
+- Describe `cómo` hacerlo cada paso. Instrucciones detalladas para manipular el DOM.
    - Se manipula el DOM manualmente, lo que lleva a código más complejo.
    - Común en JQuery y JavaScript vanilla.
    - Código `menos legible` y difícil de mantener.    
