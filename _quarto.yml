@@ -43,13 +43,19 @@ website:
           - text: "PostgreSQL"
             href: 04-data-base/postgresql.qmd  
       - text: "Tests"  
-        href: 05-tests/index.qmd
+        contents: 
+          - text: "Introduction"
+            href: 05-tests/index.qmd
+          - text: "JUnit"
+            href: 05-tests/junit.qmd  
       - text: "Documentation"
         href: 06-documentation/index.qmd
       - text: "Tools"
         href: 07-tools/index-tools.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
+      - text: "Notes"
+        href: notes.qmd  
   page-footer:
     right: "© 2024 Alberte - Apuntes de Desarrollo Web"
 

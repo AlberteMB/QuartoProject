@@ -1,3 +1,4 @@
+# Notas
 ## Para jueves
 1. Cómo ha evolucionado MVC.
     - Origenes 70-80. 
@@ -47,38 +48,48 @@
 - Servlet. Picnic
 - ID compuestas. Picnic
 - JPQL: Lenguaje SQL de JPA para queries en oneliner.
+---
 
 ## Semana 6
-- Ventajas e inconvenientes de hacer scroll position con useEffect o useState.
+- [ ] Ventajas e inconvenientes de hacer scroll position con useEffect o useState.
 
 - Continuar práctica Spring Boot con el UML de `pronunciationApp-v0.2-model-1.png`.
 
 - Deep Seek en local
+---
 
 ## Semana 7
 - [Expose local server](https://github.com/AlberteMB/pronunciationApp/blob/master/management/Testing%20and%20Mocking/expose-local-server/expose-local-server.md).`bore, ngrok, localhost.run`- 
 
-- Clases anónimas.
-- Clases anidadas.
+- [x] Clases anónimas.
+- [x] Clases anidadas.
 
 - Pronunciation, Word, StageWord, Stage, GameProgress
+---
 
 ## Semana 8
-- En React diferencia entre pasar e invocar (llamar).
+- En React, diferencia entre pasar e invocar o llamar.
 - En React pasamos funciones y no las invocamos.
-
-- Spring Boot: En las relaciones en @OneToMany, @ManyToOne y @ManyToMany, 
-en la base de datos no se guardan los array. 
-No los veremos si no usamos otro tipo de de anotación. 
+- Spring Boot: En las relaciones en @OneToMany, @ManyToOne y @ManyToMany, en la base de datos no se guardan los array. 
+- No los veremos si no usamos otro tipo de de anotación. 
 
 ## Semana 9
-[x] Definición de `Imperativa` y `declarativa` en React.
+- [x] Definición de `Imperativa` y `declarativa` en React.
 
-[ ] **List fundamental 25 keywords:**
+- [ ] **List fundamental 25 keywords:**
     - Mindset (5)
     - Communication (5)
     - Collaboration (5)
     - Execution (5)
     - Order (5)
 
-[ ] Accordion. Props, Children.    
+- [ ] Accordion. Props, Children.    
+
+- [ ] Respuesta `Undefined` del server al client.
+- [ ] Providers y consumers.
+- [ ] POJO, Bean, Entity.
+- [x] Set en lugar de List para Enum. En `Set` cada valor en él es único. No se repiten nunca.
+
+- [ ] Patrones de diseño Singleton y Factory: PICNIC
+- [ ] Gestión del state en blockchain.
+- [ ] API: WEB3.js, ethers.js.

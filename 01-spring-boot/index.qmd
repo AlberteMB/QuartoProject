@@ -30,3 +30,13 @@ What? What for? Why? How? How many (time, money)?
 - Es una clase definida dentro de otra clase. Existen `estáticas y no estáticas`:
     1. ***Static:*** Se define dentro de otra clase, pero que es estática, lo que siginifica que no tiene acceso a las instancias de la clase externa. Se accede utilizando el nombre de la clase externa.
     2. ***Non Static (inner class):*** Se define dentro de otra clase y tiene acceso a las instancias de la clase externa. 
+
+## Clase abstracta:
+- Lista de algunos atributos típicos en una clase abstracta:
+    - Id
+    - Version
+    - timeStamp
+    - CreatedBy
+    - ModifiedBy
+    - LastModified
+    - Hash

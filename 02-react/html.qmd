@@ -1,13 +1,94 @@
 # HTML
-## Labels
-- Div: 
-- Form:
-- Input: 
-- Chip: 
-- Box: 
-## Events
-- onChange:
-- onSubmit:
-- onClick:
+## Librerías no nativas de HTML:
+- Material-UI.
+- Bootstrap.
 
+## Labels (Etiquetas)
 
+- **Div**: Contenedor genérico para agrupar elementos y aplicar estilos o manipulación con CSS/JavaScript.
+  
+- **Form**: Define un formulario para recopilar datos del usuario. Contiene elementos como `input`, `textarea`, `button`, etc.
+
+- **Input**: Campo de entrada para que el usuario ingrese datos. Puede ser de tipo texto, contraseña, correo, número, etc.
+
+- **Button**: Representa un botón clickeable. Puede usarse dentro de formularios o para acciones específicas.
+
+- **A (Anchor)**: Define un enlace o hipervínculo. Se usa para navegar entre páginas o secciones.
+
+- **Img**: Inserta una imagen en la página. Requiere el atributo `src` para especificar la ruta de la imagen.
+
+- **Span**: Contenedor en línea para texto o elementos. Útil para aplicar estilos o manipular partes específicas de un texto.
+
+- **Ul / Ol / Li**: 
+  - `Ul`: Lista desordenada.
+  - `Ol`: Lista ordenada.
+  - `Li`: Elemento de lista.
+
+- **Table / Tr / Td / Th**: 
+  - `Table`: Define una tabla.
+  - `Tr`: Fila de la tabla.
+  - `Td`: Celda de datos.
+  - `Th`: Celda de encabezado.
+
+- **Header / Main / Footer / Section / Article**: Etiquetas semánticas para estructurar el contenido:
+  - `Header`: Encabezado de la página o sección.
+  - `Main`: Contenido principal de la página.
+  - `Footer`: Pie de página.
+  - `Section`: Sección temática.
+  - `Article`: Contenido independiente (como un blog post).
+
+- **Nav**: Define una sección de navegación, como un menú.
+
+- **Textarea**: Campo de texto multilínea para entradas largas.
+
+- **Select / Option**: 
+  - `Select`: Lista desplegable.
+  - `Option`: Opción dentro de la lista.
+
+- **Label**: Asocia un texto descriptivo con un elemento de formulario (como un `input`).
+
+- **Video / Audio**: 
+  - `Video`: Inserta un reproductor de video.
+  - `Audio`: Inserta un reproductor de audio.
+
+- **Iframe**: Inserta un marco embebido para mostrar contenido externo (como un mapa o un video de YouTube).
+
+---
+
+## Events (Eventos)
+
+- **onChange**: Se activa cuando el valor de un elemento (como un `input` o `select`) cambia. Usado para manejar cambios en tiempo real.
+
+- **onSubmit**: Se activa cuando un formulario es enviado. Ideal para validar datos o enviar información.
+
+- **onClick**: Se activa cuando el usuario hace clic en un elemento. Muy usado en botones o enlaces.
+
+- **onMouseOver / onMouseOut**: 
+  - `onMouseOver`: Se activa cuando el cursor del mouse pasa sobre un elemento.
+  - `onMouseOut`: Se activa cuando el cursor deja el elemento.
+
+- **onKeyDown / onKeyUp**: 
+  - `onKeyDown`: Se activa cuando una tecla es presionada.
+  - `onKeyUp`: Se activa cuando una tecla es liberada.
+
+- **onFocus / onBlur**: 
+  - `onFocus`: Se activa cuando un elemento recibe el foco (por ejemplo, al hacer clic en un `input`).
+  - `onBlur`: Se activa cuando un elemento pierde el foco.
+
+- **onLoad**: Se activa cuando un recurso (como una imagen o una página) ha terminado de cargarse.
+
+- **onScroll**: Se activa cuando el usuario desplaza la página o un elemento con scroll.
+
+- **onInput**: Similar a `onChange`, pero se activa en tiempo real mientras el usuario escribe en un campo de texto.
+
+- **onDoubleClick**: Se activa cuando el usuario hace doble clic en un elemento.
+
+- **onError**: Se activa cuando ocurre un error al cargar un recurso (como una imagen o un script).
+
+- **onResize**: Se activa cuando la ventana del navegador cambia de tamaño.
+
+- **onContextMenu**: Se activa cuando el usuario hace clic derecho en un elemento.
+
+- **onDrag / onDrop**: 
+  - `onDrag`: Se activa cuando un elemento es arrastrado.
+  - `onDrop`: Se activa cuando un elemento es soltado en una zona de destino.

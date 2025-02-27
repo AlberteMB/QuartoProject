@@ -1,0 +1,19 @@
+# JUnit + JPA
+## tabla de asserts.
+| Método               | Descripción                                                                 | Ejemplo                                                                 |
+|----------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| `assertEquals`       | Verifica que dos valores sean iguales.                                      | `assertEquals(5, resultado);`                                           |
+| `assertNotEquals`    | Verifica que dos valores **no** sean iguales.                               | `assertNotEquals(10, resultado);`                                       |
+| `assertTrue`         | Verifica que una condición sea verdadera.                                   | `assertTrue(resultado > 0);`                                            |
+| `assertFalse`        | Verifica que una condición sea falsa.                                       | `assertFalse(resultado < 0);`                                           |
+| `assertNull`         | Verifica que un objeto sea `null`.                                          | `assertNull(objeto);`                                                   |
+| `assertNotNull`      | Verifica que un objeto **no** sea `null`.                                   | `assertNotNull(objeto);`                                                |
+| `assertSame`         | Verifica que dos objetos sean la misma instancia.                           | `assertSame(objeto1, objeto2);`                                         |
+| `assertNotSame`      | Verifica que dos objetos **no** sean la misma instancia.                    | `assertNotSame(objeto1, objeto2);`                                      |
+| `assertThrows`       | Verifica que un bloque de código lance una excepción específica.            | `assertThrows(IllegalArgumentException.class, () -> { ... });`          |
+| `assertAll`          | Agrupa múltiples aserciones y ejecuta todas, reportando fallas si las hay.  | `assertAll(() -> assertEquals(5, resultado), () -> assertNotNull(obj));`|
+| `assertIterableEquals`| Verifica que dos colecciones contengan los mismos elementos en el mismo orden.| `assertIterableEquals(lista1, lista2);`                                |
+| `assertArrayEquals`  | Verifica que dos arreglos contengan los mismos elementos en el mismo orden. | `assertArrayEquals(arreglo1, arreglo2);`                                |
+| `assertTimeout`      | Verifica que un bloque de código se ejecute dentro de un tiempo límite.     | `assertTimeout(Duration.ofSeconds(1), () -> { ... });`                  |
+| `assertTimeoutPreemptively` | Similar a `assertTimeout`, pero interrumpe la ejecución si se excede el tiempo. | `assertTimeoutPreemptively(Duration.ofSeconds(1), () -> { ... });`     |
+

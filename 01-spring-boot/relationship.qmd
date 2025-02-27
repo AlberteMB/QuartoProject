@@ -104,3 +104,8 @@ private Parent parent;
 Usar `FetchType.LAZY` es generalmente la mejor opción para evitar consultas innecesarias y mejorar el rendimiento de la aplicación. Si se necesita acceder a los datos de una relación `LAZY` después de cerrar la sesión de Hibernate, se recomienda usar **fetch joins** en consultas JPQL o DTOs personalizados.
 
 
+## Pasos a seguir para configurar relaciones:
+- Definir la relación.
+- Definir anotaciones.
+- Definir JoinColumn o Jointable
+- Configurar las anotaciones.

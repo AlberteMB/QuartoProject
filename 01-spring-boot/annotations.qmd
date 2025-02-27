@@ -1,13 +1,34 @@
 # Annotations
 
 ## @RequestParam:
-    - 
+    - Se utiliza para extraer parámetros de la URL de una solicitud HTTP (generalmente en solicitudes GET).
+```java
+@GetMapping("/saludo")
+public String saludar(@RequestParam String nombre) {
+    return "Hola, " + nombre;
+}
+```    
 ## @RequestVariable:
-    - 
+    - Se utiliza para extraer valores de variables que forman parte de la ruta de la URL.
+ ```java
+ @GetMapping("/usuario/{id}")
+public String obtenerUsuario(@PathVariable Long id) {
+    return "Usuario con ID: " + id;
+}
+```   
 ## @ResponseEntity:
-    -
+    -Representa una respuesta HTTP personalizable, incluyendo el cuerpo de la respuesta, el código de estado y los encabezados.
+```java
+@GetMapping("/usuario/{id}")
+public ResponseEntity<String> obtenerUsuario(@PathVariable Long id) {
+    if (id == 1) {
+        return ResponseEntity.ok("Usuario encontrado");
+    } else {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
+    }
+}
+```    
     
-
 ## @Autowired: 
     - En el `Controller` sustituir esto:
     ``` java
@@ -23,16 +44,56 @@
     }
     ```
 ## @CreatedDate: 
-- 
+- Anotación de Spring Data JPA que se utiliza para marcar un campo que almacenará automáticamente la fecha de creación de una entidad.
+```java
+@Entity
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @CreatedDate
+    private LocalDateTime fechaCreacion;
+}
+```
 ## @LastModifiedDate: 
-- 
+- Anotación de Spring Data JPA que se utiliza para marcar un campo que almacenará automáticamente la fecha de la última modificación de una entidad.
+```java
+@Entity
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @LastModifiedDate
+    private LocalDateTime fechaModificacion;
+}
+```
 ## @CreatedBy:
-- 
+- Anotación de Spring Data JPA que se utiliza para marcar un campo que almacenará automáticamente el usuario que creó la entidad.
+```java
+@Entity
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @CreatedBy
+    private String creadoPor;
+}
+```
 ## @LastModifiedBy:
-- 
+- Anotación de Spring Data JPA que se utiliza para marcar un campo que almacenará automáticamente el usuario que realizó la última modificación de la entidad.
 ## @NotNull:
-- 
+- Anotación de Bean Validation que se utiliza para validar que un campo no sea nulo.
+- Si nombre es `null`, se lanzará una excepción de validación.
+```java
+public class Usuario {
+    @NotNull
+    private String nombre;
+}
+```
 ## @Size:
-- 
+- Anotación de Bean Validation que se utiliza para validar que el tamaño de un campo (como una cadena o una colección) esté dentro de los límites especificados.
 
             
