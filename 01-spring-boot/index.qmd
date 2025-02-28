@@ -7,8 +7,6 @@
 -
 ## Inherence
 -
-## POJO
-- Plain Old Java Objects
 
 ::: En cada comentario  ::: {.callout-important}
 What? What for? Why? How? How many (time, money)?
@@ -22,21 +20,3 @@ What? What for? Why? How? How many (time, money)?
     - Las otras clases no pueden existir sin ella.
     - Responder a las preguntas: What, What for, Why, How, How many?
     - Las clases pivotales siempre están conectadas con el `user story`.
-
-## Clase anónima
-- Es una `subclase sin nombre` que se define en el momento en que se instancia. Se utiliza cuando se necesita una clase que sólo se usará una vez (implementar interfaces o extender clases de forma temporal)
-
-## Clase anidada
-- Es una clase definida dentro de otra clase. Existen `estáticas y no estáticas`:
-    1. ***Static:*** Se define dentro de otra clase, pero que es estática, lo que siginifica que no tiene acceso a las instancias de la clase externa. Se accede utilizando el nombre de la clase externa.
-    2. ***Non Static (inner class):*** Se define dentro de otra clase y tiene acceso a las instancias de la clase externa. 
-
-## Clase abstracta:
-- Lista de algunos atributos típicos en una clase abstracta:
-    - Id
-    - Version
-    - timeStamp
-    - CreatedBy
-    - ModifiedBy
-    - LastModified
-    - Hash

@@ -54,6 +54,10 @@ website:
         href: 06-documentation/index.qmd
       - text: "Tools"
         href: 07-tools/index-tools.qmd  
+      - text: "Design Patters"
+        contents:
+          - text: "Introduction"
+            href: 08-design-patterns/index.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"

@@ -93,3 +93,5 @@
 - [ ] Patrones de diseño Singleton y Factory: PICNIC
 - [ ] Gestión del state en blockchain.
 - [ ] API: WEB3.js, ethers.js.
+
+- [ ] SSR y CSR.
