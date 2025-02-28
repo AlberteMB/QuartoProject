@@ -1,0 +1,121 @@
+# Objects
+## POJO (Plain Old Java Object)
+- Es una clase Java simple que no está ligada a ninguna tecnología o framework específico. No extiende clases predefinidas ni implementa interfaces especiales.
+Características:
+    - No tiene restricciones en su diseño.
+    - No depende de anotaciones o configuraciones externas.
+    - Es fácil de entender y mantener.
+
+## Bean
+- Es un tipo especial de POJO que sigue ciertas convenciones y reglas. Es comúnmente utilizado en frameworks como Spring para la inyección de dependencias y la gestión del ciclo de vida. 
+Características:
+    - Debe tener un constructor sin argumentos (por defecto).
+    - Debe implementar la interfaz Serializable (en algunos casos).
+    - Usa métodos getters y setters para acceder y modificar sus propiedades.
+    - Puede ser gestionado por un contenedor (como Spring).
+
+## Entity
+- Es una clase Java que representa una entidad en una base de datos. Se utiliza en el contexto de JPA (Java Persistence API) u ORM (Object-Relational Mapping) para mapear objetos a tablas de una base de datos.
+Características:
+    - Está anotada con @Entity para indicar que es una entidad persistente.
+    - Tiene un campo anotado con @Id que representa la clave primaria.
+    - Puede tener relaciones con otras entidades (por ejemplo, @OneToMany, @ManyToOne).
+    - Se usa en combinación con un framework como Hibernate para gestionar la persistencia.
+
+| **Característica**       | **POJO**                          | **Bean**                          | **Entity**                        |
+|--------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| **Definición**           | Clase Java simple sin restricciones | POJO con convenciones específicas | POJO que representa una entidad en una base de datos |
+| **Uso**                  | General                           | Frameworks como Spring            | Persistencia (JPA, Hibernate)     |
+| **Anotaciones**          | No requiere anotaciones           | Puede usar anotaciones de Spring  | Usa anotaciones de JPA (`@Entity`, `@Id`, etc.) |
+| **Constructor**          | Sin restricciones                 | Constructor sin argumentos        | Sin restricciones (pero a menudo sin argumentos) |
+| **Serializable**         | No es necesario                   | A menudo implementa `Serializable` | No es necesario (a menos que se requiera) |
+| **Ciclo de vida**        | No gestionado                    | Gestionado por un contenedor      | Gestionado por un ORM             |    
+
+## Clase anónima
+- Es una `subclase sin nombre` que se define en el momento en que se instancia. Se utiliza cuando se necesita una clase que sólo se usará una vez (implementar interfaces o extender clases de forma temporal)- 
+
+## Clase anidada
+- Es una clase definida dentro de otra clase. Existen `estáticas y no estáticas`:
+    1. ***Static:*** Se define dentro de otra clase, pero que es estática, lo que siginifica que no tiene acceso a las instancias de la clase externa. Se accede utilizando el nombre de la clase externa.
+    2. ***Non Static (inner class):*** Se define dentro de otra clase y tiene acceso a las instancias de la clase externa. 
+
+## Clase abstracta:
+- Es una clase que no se puede instanciar directamente. En su lugar, se utiliza como una plantilla o base para otras clases que sí pueden ser instanciadas. Las clases abstractas están diseñadas para ser extendidas (heredadas) por subclases concretas.
+- Lista de algunos atributos típicos en una clase abstracta:
+    - Id
+    - Version
+    - timeStamp
+    - CreatedBy
+    - ModifiedBy
+    - LastModified
+    - Hash
+
+## Clase Final
+- Es una clase que no puede ser extendida (no puede tener subclases). Se declara con la palabra clave final. Útil cuando quieres evitar que una clase sea modificada o extendida.
+
+## Clase genérica
+- Es una clase que puede trabajar con cualquier tipo de dato. Se define usando parámetros de tipo (<T>). Proporciona flexibilidad y reutilización de código.
+
+## Clase Singleton
+- eE una clase que solo permite una única instancia en toda la aplicación. Se utiliza para controlar el acceso a recursos compartidos.
+Características:
+    - Tiene un constructor privado para evitar instanciación externa.
+    - Proporciona un método estático para obtener la instancia única.
+
+## Clase Interna (Inner Class)
+- Es una clase definida dentro de otra clase. Tiene acceso a los miembros de la clase externa, incluso a los privados.
+Características:
+    - Puede ser estática o no estática.
+    - Útil para encapsular lógica relacionada.
+```java 
+public class Externa {
+    private int valor = 10;
+
+    class Interna {
+        void mostrarValor() {
+            System.out.println("El valor es: " + valor);
+        }
+    }
+}
+```
+
+## Clase de Registro (Record)
+- Es una clase inmutable que se utiliza principalmente para almacenar datos. Simplifica la creación de clases que solo contienen datos.
+Características:
+    - Genera automáticamente métodos como equals(), hashCode() y toString().
+    - Es una forma concisa de definir clases de datos.
+```java
+public record Persona(String nombre, int edad) {}
+// Equivale a una clase con atributos, constructor, getters, equals, hashCode y toString.
+```
+
+## Clase Enum
+- Es un tipo especial de clase que representa un grupo de constantes. Útil para definir conjuntos fijos de valores como días de la semana o estados. Puede tener métodos y atributos.
+
+## Clase de Excepción
+- Una clase de excepción personalizada es una clase que extiende Exception o RuntimeException y se utiliza para manejar errores específicos de la aplicación. Permite crear excepciones personalizadas con mensajes y comportamientos específicos.
+```java 
+public class MiExcepcion extends Exception {
+    public MiExcepcion(String mensaje) {
+        super(mensaje);
+    }
+}
+```
+## Clase de Servicio (Service Class)
+- Ss una clase que contiene la lógica de negocio de una aplicación. Es común en aplicaciones empresariales y se usa en conjunto con frameworks como Spring.
+Características:
+    - Suele ser gestionada por un contenedor de dependencias.
+    - Contiene métodos que realizan operaciones específicas.
+
+| **Tipo de Clase**       | **Descripción**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+| **Concreta**            | Clase normal que puede ser instanciada directamente.                            |
+| **Final**               | Clase que no puede ser extendida.                                               |
+| **Genérica**            | Clase que trabaja con cualquier tipo de dato usando parámetros de tipo (`<T>`). |
+| **Singleton**           | Clase que permite solo una instancia en toda la aplicación.                     |
+| **Utilidades**          | Clase con métodos estáticos para agrupar funcionalidades relacionadas.          |
+| **Interna**             | Clase definida dentro de otra clase.                                            |
+| **Registro (Record)**   | Clase inmutable para almacenar datos (introducida en Java 16).                  |
+| **Enumeración (Enum)**  | Clase que representa un grupo de constantes.                                    |
+| **Excepción**           | Clase personalizada para manejar errores específicos.                           |
+| **Servicio**            | Clase que contiene la lógica de negocio en aplicaciones empresariales.          |    

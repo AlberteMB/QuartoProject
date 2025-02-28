@@ -20,6 +20,8 @@ website:
             href: 01-spring-boot/request-response-cycle.qmd  
           - text: "Relationships"
             href: 01-spring-boot/relationship.qmd  
+          - text: "Classes"
+            href: 01-spring-boot/classes.qmd  
       - text: "React"   
         contents:  
           - text: "Introduction"
