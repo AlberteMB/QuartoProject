@@ -1,5 +1,63 @@
 # Pattern Designs
 ## Singleton
-- 
+- El patrón Singleton asegura que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia. Esto es útil cuando necesitas que solo exista un objeto de una clase en todo el sistema, como en el caso de configuraciones globales, conexiones a bases de datos o manejadores de logs.
+
+Características clave:
+    - La clase tiene un constructor privado para evitar que se instancie desde fuera.
+    - Proporciona un método estático (por ejemplo, getInstance()) para obtener la única instancia.
+    - La instancia se crea de manera perezosa (lazy initialization) o al inicio, dependiendo de la implementación.
+Ejemplo:
+```java
+public class Singleton {
+    private static Singleton instance;
+
+    private Singleton() {
+        // Constructor privado
+    }
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+```
+
 ## Factory
-- 
+- El patrón Factory es un patrón de creación que proporciona una interfaz para crear objetos en una superclase, pero permite que las subclases alteren el tipo de objetos que se crearán. Este patrón es útil cuando necesitas desacoplar la lógica de creación de objetos de su uso.
+Características clave:
+    - Define una interfaz o clase abstracta para crear objetos.
+    - Las subclases o implementaciones concretas deciden qué objeto concreto instanciar.
+    - Fomenta el principio de responsabilidad única y facilita la extensibilidad.
+Ejemplo:
+```java
+public interface Product {
+    void use();
+}
+
+public class ProductA implements Product {
+    @Override
+    public void use() {
+        System.out.println("Using Product A");
+    }
+}
+
+public class ProductB implements Product {
+    @Override
+    public void use() {
+        System.out.println("Using Product B");
+    }
+}
+
+public class ProductFactory {
+    public static Product createProduct(String type) {
+        if (type.equals("A")) {
+            return new ProductA();
+        } else if (type.equals("B")) {
+            return new ProductB();
+        }
+        throw new IllegalArgumentException("Tipo de producto no válido");
+    }
+}
+```    

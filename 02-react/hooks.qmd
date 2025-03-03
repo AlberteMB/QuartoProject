@@ -34,13 +34,25 @@ const cachedValue = useMemo( calculateValue, dependencies);
 ```
 <
 ## useContext
-- **Compartir estados entre componentes**. Permite acceder a valores de un contexto sin necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes.
+Permite **compartir estados entre componentes** sin la necesidad de pasar props manualmente a través de múltiples niveles del árbol de componentes. Esto es especialmente útil cuando tienes datos que deben ser accesibles por muchos componentes en diferentes niveles de la jerarquía.
 
-✅ Uso principal: Compartir estados globales (tema, autenticación, idioma, etc.).
+- **Tema**: Cambiar entre modo claro y oscuro.
+- **Autenticación**: Compartir el estado de autenticación del usuario.
+- **Idioma**: Cambiar el idioma de la aplicación.
 
+### Cómo Funciona
+1. **Crear un Contexto**: Primero, necesitas crear un contexto usando `React.createContext()`. Este contexto actuará como un contenedor para los valores que deseas compartir.
+2. **Proveer el Contexto**: Luego, debes envolver los componentes que necesitan acceder a este contexto con un `Provider`. El `Provider` toma un `value` que será accesible para todos los componentes descendientes.
+3. **Consumir el Contexto**: Finalmente, en cualquier componente descendiente, puedes usar el hook `useContext` para acceder al valor proporcionado por el `Provider`.
+
+### Ejemplo:
 ```jsx
+import React, { useContext } from 'react';
+
+// 1. Crear un contexto
 const MyContext = React.createContext();
 
+// 2. Proveer el contexto
 function Parent() {
   return (
     <MyContext.Provider value="Hola, mundo">
@@ -49,10 +61,13 @@ function Parent() {
   );
 }
 
+// 3. Consumir el contexto
 function Child() {
   const value = useContext(MyContext);
   return <p>{value}</p>;
 }
+
+export default Parent;
 ```
 
 ## useReducer

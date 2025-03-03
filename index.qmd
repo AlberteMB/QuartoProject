@@ -40,8 +40,17 @@ title: "GENERAL"
 - Comunidades pequeñas
 :::
 ---
-## Idea de proyecto
-- App para aprender inglés por medio de tarjetas con división de la palabra por sílabas, un botón para ejecutar un audio que reproducirá la palabra mientras cada sílaba se irá poniendo en negrita según avanza. Otro botón para, a través del micro, poder pronunciar nosotros una palabra y que, por medio de IA, nos corrija la pronunciación. Dispondrá de una puntuación en la pronunciación, lista de palabras favoritas, quiz, ejemplos en frases y evaluación continua.
 
-- 'Cards' de React. [MUI-React](https://mui.com/material-ui/react-card/)
+
+
+## SSR (Server-Side Rendering) y CSR (Client-Side Rendering)
+
+| Característica          | SSR (Server-Side Rendering)       | CSR (Client-Side Rendering)       |
+|-------------------------|-----------------------------------|-----------------------------------|
+| **Renderizado**          | En el servidor                   | En el navegador                   |
+| **SEO**                 | Mejor                            | Más complicado                    |
+| **Carga inicial**       | Más rápida                       | Más lenta                         |
+| **Interactividad**      | Limitada (requiere JS adicional) | Muy fluida                        |
+| **Carga del servidor**  | Mayor                            | Menor                             |
+| **Uso típico**          | Páginas con contenido estático   | Aplicaciones web dinámicas (SPA)  |
 

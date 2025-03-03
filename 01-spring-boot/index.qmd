@@ -8,7 +8,8 @@
 ## Inherence
 -
 
-::: En cada comentario  ::: {.callout-important}
+::: {.callout-important}
+## En cada comentario
 What? What for? Why? How? How many (time, money)?
 :::
 ---

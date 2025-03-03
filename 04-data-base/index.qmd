@@ -1,0 +1,23 @@
+# Data bases
+## **Bases de Datos SQL (Relacionales)**  
+
+| Base de Datos          | Características                                           | Motivo para elegirla |
+|------------------------|-----------------------------------------------------------|----------------------|
+| **MySQL**             | Código abierto, rápido, buena compatibilidad con la web, amplia comunidad. | Proyectos web con alto rendimiento y escalabilidad moderada. |
+| **PostgreSQL**        | Código abierto, potente, soporte para JSON, ACID, extensibilidad. | Aplicaciones que requieren integridad de datos y consultas complejas. |
+| **SQLite**           | Ligera, sin servidor, ideal para apps móviles y embebidas. | Aplicaciones con bajo consumo de recursos, como móviles o IoT. |
+| **Microsoft SQL Server** | Integración con el ecosistema de Microsoft, seguridad avanzada. | Empresas que usan productos Microsoft y requieren robustez en datos. |
+| **Oracle Database**   | Alto rendimiento, escalabilidad, seguridad, uso en grandes empresas. | Aplicaciones empresariales críticas que manejan grandes volúmenes de datos. |
+
+---
+
+## **Bases de Datos NoSQL (No Relacionales)**  
+
+| Base de Datos          | Características                                           | Motivo para elegirla |
+|------------------------|-----------------------------------------------------------|----------------------|
+| **MongoDB**           | Base de datos documental, JSON-like, flexible, escalable horizontalmente. | Aplicaciones con datos semi estructurados o dinámicos, como e-commerce o redes sociales. |
+| **Cassandra**         | Base de datos distribuida, escalabilidad masiva, tolerante a fallos. | Aplicaciones con grandes volúmenes de datos y alta disponibilidad, como big data o IoT. |
+| **Redis**            | Base de datos en memoria, rápida, clave-valor, caché y almacenamiento temporal. | Caché de alto rendimiento o almacenamiento temporal en sistemas en tiempo real. |
+| **Firebase Realtime Database** | Base de datos en tiempo real, sin servidor, fácil integración con apps móviles. | Aplicaciones móviles y web que requieren sincronización instantánea. |
+| **DynamoDB**          | Base de datos de Amazon Web Services, NoSQL escalable, sin servidor. | Aplicaciones en AWS que requieren baja latencia y alta escalabilidad. |
+| **Neo4j**            | Base de datos orientada a grafos, ideal para relaciones complejas. | Aplicaciones con análisis de redes, gráficos sociales o sistemas de recomendación. |

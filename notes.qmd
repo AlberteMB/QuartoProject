@@ -87,11 +87,10 @@
 
 - [ ] Respuesta `Undefined` del server al client.
 - [ ] Providers y consumers.
-- [ ] POJO, Bean, Entity.
+- [x] POJO, Bean, Entity.
 - [x] Set en lugar de List para Enum. En `Set` cada valor en él es único. No se repiten nunca.
 
-- [ ] Patrones de diseño Singleton y Factory: PICNIC
+- [x] Patrones de diseño Singleton y Factory: PICNIC
 - [ ] Gestión del state en blockchain.
 - [ ] API: WEB3.js, ethers.js.
 
-- [ ] SSR y CSR.

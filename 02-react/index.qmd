@@ -41,6 +41,9 @@ npm run dev
 ```
 :::
 
+## Cards en react
+- 'Cards' de React. [MUI-React](https://mui.com/material-ui/react-card/)
+
 ## Posibles errores: Guía
  1. Project Structure > package.json
  2. Import/Export
