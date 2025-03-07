@@ -21,3 +21,12 @@
 | **Firebase Realtime Database** | Base de datos en tiempo real, sin servidor, fácil integración con apps móviles. | Aplicaciones móviles y web que requieren sincronización instantánea. |
 | **DynamoDB**          | Base de datos de Amazon Web Services, NoSQL escalable, sin servidor. | Aplicaciones en AWS que requieren baja latencia y alta escalabilidad. |
 | **Neo4j**            | Base de datos orientada a grafos, ideal para relaciones complejas. | Aplicaciones con análisis de redes, gráficos sociales o sistemas de recomendación. |
+
+---
+
+## Cargar datos desde archivo en `resources`
+- Generar archivo `data.sql` y configurar en `application.properties` para que cargue el archivo al arrancar la DB. Hay que fijarse en ya tener la DB creada y después configurarla en `update`.
+
+    - **application.properties:** spring.jpa.defer-datasource-initialization=true.
+
+    

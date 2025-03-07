@@ -2,39 +2,67 @@
 
 - En JPA, las relaciones entre entidades se definen con anotaciones como `@OneToMany`, `@ManyToOne` y `@ManyToMany`. Es importante entender cómo definir el **Owner** de la relación, cómo gestionar la **Foreign Key**, cuándo usar `@JsonIgnore` y cómo manejar la **carga de datos** con `fetch = LAZY` o `fetch = EAGER`.
 
+---
+
 ## OneToMany
 - Se usa `@OneToMany(mappedBy = "...")` en la clase que representa la parte "One". Sólo cuando es bidireccional.
+
 - La parte "Many" se representa con una `List<Tipo>` en la entidad propietaria.
+
 - **Foreign Key:** Se almacena en la tabla de la parte "Many". **En caso de ser `SQL`. En `NoSQL` será diferente.**
+
 - **Unidireccional:** Si solo la entidad "One" tiene la lista. Sólo el que tenga la anotación, contiene `@JoinColumn(name = "...")`.
+
 - **Bidireccional:** Si la entidad "Many" también tiene una referencia a la entidad "One" con `@ManyToOne`.
+
 - **@JsonIgnore:** Se usa en la lista `List<Tipo>` de la parte "One" para evitar ciclos infinitos al serializar a JSON.
+
 - **Carga de datos (`fetch`):** Por defecto es `LAZY`, lo que significa que los datos solo se cargan cuando se acceden por primera vez.
+
 - **Cascade:** Permite que las operaciones en la entidad padre se propaguen a la lista de los hijos.
+
 - **orphanRemoval:** Se usa para indicar que las entidades relacionadas deben eliminarse automáticamente cuando ya no están referenciadas. Asegura que la entidad huérfana sea eliminada físicamente de la base de datos, no solo desasociada.`@OneToMany(mappedBy = "", orphanRemoval = true)`
+
+---
 
 ## ManyToOne
 - Se usa `@JoinColumn(name = "...")` en la entidad "Many" para definir la clave foránea.
+
 - La parte "One" se modela con una referencia a un objeto de la entidad relacionada.
+
 - **Foreign Key:** Se almacena en la tabla de la parte "Many". **En caso de ser `SQL`. En `NoSQL` será diferente.**
+
 - **Siempre es unidireccional**, pero se convierte en **bidireccional** si la otra entidad incluye una lista con `@OneToMany(mappedBy = "...")`.
+
 - **@JsonIgnore:** No suele ser necesario aquí, pero si la relación es bidireccional, se debe añadir en la referencia a la parte "One" para evitar ciclos infinitos.
+
 - **Definir el Owner:** La entidad "Many" es la propietaria, ya que contiene la clave foránea con @JoinColumn.
+
+---
 
 ## ManyToMany
 - Se usa `@JoinTable` para definir la tabla intermedia.
+
 - Cada entidad tiene una `List<Tipo>` para representar la relación.
+
 - **Foreign Key:** No se almacena en ninguna de las tablas principales, sino en una **tabla intermedia** que contiene dos columnas con claves foráneas, una para cada entidad relacionada. **En caso de ser `SQL`. En `NoSQL` será diferente.**
+
 - **Definición de la tabla intermedia:**
   - Se usa `@JoinTable(name = "...")` para asignarle un nombre.
   - Dentro de `@JoinTable`, se definen dos `@JoinColumn`:
     - `joinColumns = @JoinColumn(name = "...")` → Hace referencia a la clave primaria de la entidad actual.
     - `inverseJoinColumns = @JoinColumn(name = "...")` → Hace referencia a la clave primaria de la otra entidad.
+
 - **Unidireccional:** Si solo una entidad tiene la lista y la anotación `@ManyToMany`.
+
 - **Bidireccional:** Si ambas entidades tienen listas apuntando a la otra y la anotación `@ManyToMany`.
+
 - **@JsonIgnore:** Se debe añadir en una de las listas para evitar bucles de serialización.
+
 - **Definir el Owner:** La entidad que define @JoinTable es la propietaria de la relación. La otra entidad solo usa @ManyToMany(mappedBy = "...").
+
 - **Carga de datos (fetch):** Por defecto es `LAZY` para evitar cargar todas las entidades relacionadas automáticamente.
+
 - **Cascade:** Se añade en la entidad que tiene @JoinTable, que es la propietaria de la relación.
 
 ### Ejemplo de tabla intermedia en `@ManyToMany`

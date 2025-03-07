@@ -44,6 +44,8 @@ website:
             href: 04-data-base/sql.qmd
           - text: "PostgreSQL"
             href: 04-data-base/postgresql.qmd  
+          - text: "Queries"
+            href: 04-data-base/queries.qmd  
       - text: "Tests"  
         contents: 
           - text: "Introduction"
@@ -51,9 +53,15 @@ website:
           - text: "JUnit"
             href: 05-tests/junit.qmd  
       - text: "Documentation"
-        href: 06-documentation/index.qmd
+        contents:
+          - text: "Introduction"
+            href: 06-documentation/index.qmd
       - text: "Tools"
-        href: 07-tools/index-tools.qmd  
+        contents:
+          - text: "Introduction"
+            href: 07-tools/index-tools.qmd  
+          - text: "GIT"
+            href: 07-tools/git.qmd  
       - text: "Design Patters"
         contents:
           - text: "Introduction"
