@@ -65,7 +65,11 @@ website:
       - text: "Design Patters"
         contents:
           - text: "Introduction"
-            href: 08-design-patterns/index.qmd  
+            href: 08-design-patterns/index.qmd
+      - text: "Film Advisor"
+        contents:        
+          - text: "Notes"
+            href: 09-film-advisor/uml.qmd
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"

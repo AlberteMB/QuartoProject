@@ -1,0 +1,61 @@
+# Film Advisor
+## UML
+- Clases básicas:
+    - User
+    - Movie
+    - Platform
+### Relationships
+- User - Platform : n:m.
+- Movie - Platform: n:m.
+- User - Movie: n:m with Join Entity UserMovieInteraction.
+
+## Architecture in Hilla
+### Endpoints
+- Es una clase que define uno o más métodos públicos. Un puente entre los endpoints del backend y el frontend en TypeScript. `Annotation = @Endpoint`.
+- Hilla escanea la clase marcada con @Endpoint. Para cada solicitud de acceso a un método público, se realiza una comprobación de permisos.
+- Es como `RestController`, pero hilla genera automáticamente un  cliente TypeScript para interactuar con estos endpoints.
+
+### AnonymousAllowed
+- Anotación que va de la mano de @Endpoint. En este caso, sirve para permitir a cualquiera llamar al método desde el lado del cliente.
+
+### Endpoint generator
+
+
+## Mockup
+- 
+
+## Data base
+- PostgreSQL. Posiblemente en la nube con [Instagres](instagres.com).
+
+### Volumen de datos
+El volumen que ocuparían las películas en una base de datos PostgreSQL depende de varios factores:
+
+1. Cantidad de películas: Según JustWatch, hay aproximadamente 90.000 títulos entre películas y series.
+2. Estructura de los datos: Un esquema típico podría incluir los siguientes campos:
+    - ID (entero, 4 bytes)
+    - Título (texto, ~100 caracteres en promedio → 200 bytes en UTF-8)
+    - Año de estreno (entero, 4 bytes)
+    - Duración (entero, 4 bytes)
+    - Géneros (lista de strings, ~50 caracteres → 100 bytes)
+    - Sinopsis (texto, ~500 caracteres → 1 KB)
+    - Puntuaciones (flotante, 8 bytes)
+    - Enlaces a plataformas (lista de URLs, ~300 bytes)
+    - Actores y directores (lista de nombres, ~500 bytes)
+    - Imágenes (URLs, ~200 bytes)
+
+#### Estimación de espacio
+Si asumimos un peso medio de 2 KB por registro, para 90.000 películas, la tabla principal ocupará:
+
+    90.000×2KB=180MB
+
+A esto habría que sumar:
+
+    - Índices (20-50% extra): ~50 MB
+    - Historial de cambios (WAL logs): ~20 MB
+    - Tablas relacionadas (actores, géneros, plataformas): ~100 MB
+    - Imágenes y carátulas (si se almacenan en la BD en lugar de URLs): varios GB
+#### Espacio total estimado
+Si solo almacenamos metadatos, un volumen realista en PostgreSQL sería entre 250 MB y 500 MB.
+
+## RestTemplate
+- 

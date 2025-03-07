@@ -94,3 +94,18 @@
 - [ ] Gestión del state en blockchain.
 - [ ] API: WEB3.js, ethers.js.
 
+## Semana 10
+- [ ] 4 Tipos de queries: 
+    1. Derivadas (subject + predicate).
+    2. Named queries.
+    3. @Query (JPQL).
+    4. Native (Directamente SQL).
+
+- [ ] FTP en web.
+
+- [ ] Film Advisor
+        1. UML sencillo.
+        2. Arquitectura con Hilla. Revisar endpoints.
+        3. Mockup: Main y User
+        4. DB: Tipo, estructura y volumen que maneje.
+        5. RestTemplate: Manejo de datos de API de Java.
