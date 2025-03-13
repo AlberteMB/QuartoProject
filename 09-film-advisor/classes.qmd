@@ -1,0 +1,80 @@
+# Entidades JPA para Film Advisor
+
+Este documento describe las entidades JPA que conforman el proyecto *Film Advisor*, organizadas por prioridad para la versión 0.1.
+
+## 📌 **Entidades Fundamentales (Versión 0.1)**
+
+### **User** (Entidad)
+- `id`: Identificador único (UUID o Long, generado automáticamente)
+- `username`: Nombre de usuario
+- `email`: Correo electrónico
+- `password`: Contraseña (hashed)
+- **Relaciones**:
+  - `@OneToOne` con `UserPreferences`
+  - `@OneToMany` con `WatchedMovie`, `WatchlistMovie`, `DiscardedMovie`
+
+### **Movie** (Entidad)
+- `id`: Identificador único
+- `title`: Título de la película
+- `year`: Año de lanzamiento
+- `genres`: Géneros (lista o `@ElementCollection`)
+- `director`: Nombre del director
+- `actors`: Lista de actores (`@ElementCollection`)
+- **Relaciones**:
+  - `@OneToOne` con `MovieDetails`
+  - `@OneToMany` con `WatchedMovie`, `WatchlistMovie`, `DiscardedMovie`
+  - `@OneToOne` con `StreamingAvailability`
+
+### **WatchedMovie** (Entidad)
+- `id`: Identificador único
+- `user`: Usuario (`@ManyToOne` con `User`)
+- `movie`: Película (`@ManyToOne` con `Movie`)
+- `rating`: Valoración del usuario ("me gusta" o "no me gusta")
+
+### **WatchlistMovie** (Entidad)
+- `id`: Identificador único
+- `user`: Usuario (`@ManyToOne` con `User`)
+- `movie`: Película (`@ManyToOne` con `Movie`)
+
+### **DiscardedMovie** (Entidad)
+- `id`: Identificador único
+- `user`: Usuario (`@ManyToOne` con `User`)
+- `movie`: Película (`@ManyToOne` con `Movie`)
+
+---
+
+## 🚀 **Entidades Secundarias (Para futuras versiones)**
+
+### **UserPreferences** (Entidad)
+- `id`: Identificador único
+- `user`: Usuario (`@OneToOne` con `User`)
+- `preferredPlatforms`: Plataformas de streaming preferidas (`@ElementCollection`)
+- `minRating`: Puntuación mínima seleccionada
+- `preferredGenres`: Géneros favoritos (`@ElementCollection`)
+
+### **MovieDetails** (Entidad)
+- `id`: Identificador único
+- `movie`: Película (`@OneToOne` con `Movie`)
+- `synopsis`: Sinopsis de la película
+- `ratings`: Puntuaciones en IMDb, Rotten Tomatoes, Filmaffinity
+- `externalLinks`: Enlaces a estas plataformas
+
+### **StreamingAvailability** (Entidad)
+- `id`: Identificador único
+- `movie`: Película (`@OneToOne` con `Movie`)
+- `platforms`: Lista de plataformas de streaming (`@ManyToMany` con `StreamingPlatform`)
+
+### **StreamingPlatform** (Entidad)
+- `id`: Identificador único
+- `name`: Nombre de la plataforma (ej. "Netflix", "HBO", etc.)
+
+---
+
+## 📂 **Resumen de Relaciones**
+
+- **`User`** → `@OneToOne` con `UserPreferences`, `@OneToMany` con `WatchedMovie`, `WatchlistMovie`, `DiscardedMovie`
+- **`Movie`** → `@OneToOne` con `MovieDetails`, `@OneToMany` con `WatchedMovie`, `WatchlistMovie`, `DiscardedMovie`, `@OneToOne` con `StreamingAvailability`
+- **`WatchedMovie` / `WatchlistMovie` / `DiscardedMovie`** → `@ManyToOne` con `User`, `@ManyToOne` con `Movie`
+- **`StreamingAvailability`** → `@OneToOne` con `Movie`, `@ManyToMany` con `StreamingPlatform`
+- **`MovieDetails`** → `@OneToOne` con `Movie`
+

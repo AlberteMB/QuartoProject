@@ -4,6 +4,11 @@
     - User
     - Movie
     - Platform
+---
+    - UserPreference
+    - UserFilmStatus
+    - FilmRating
+
 ### Relationships
 - User - Platform : n:m.
 - Movie - Platform: n:m.
@@ -19,7 +24,7 @@
 - Anotación que va de la mano de @Endpoint. En este caso, sirve para permitir a cualquiera llamar al método desde el lado del cliente.
 
 ### Endpoint generator
-
+- 
 
 ## Mockup
 - 

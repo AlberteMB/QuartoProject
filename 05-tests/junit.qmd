@@ -1,4 +1,9 @@
 # JUnit + JPA
+## Partes de los tests:
+- **Given:** Preparación del contexto.
+- **Then:** Ejecución de la funcionalidad a probar.
+- **Assert:** Verificación del resultado esperado.
+
 ## tabla de asserts.
 | Método               | Descripción                                                                 | Ejemplo                                                                 |
 |----------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------|

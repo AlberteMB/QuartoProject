@@ -30,10 +30,66 @@
 | **IgnoreCase**     | `findByFirstnameIgnoreCase`                 | `… where UPPER(x.firstname) = UPPER(?1)`                                     |
 
 ## Named
-- 
+- Las Named Queries son consultas predefinidas que se asocian con una entidad y se declaran con la anotación @NamedQuery o @NamedQueries en la clase de entidad, o dentro del archivo `orm.xml`.
+```java
+@Entity
+@NamedQuery(
+    name = "Movie.findByTitle",
+    query = "SELECT m FROM Movie m WHERE m.title = :title"
+)
+public class Movie {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+}
+```
+**Ventajas:**
+
+✔ Separación de consultas y lógica de negocio.
+
+✔ Se precompilan en el arranque, lo que mejora el rendimiento.
+
+**Desventajas:**
+
+❌ No es tan flexible como otras opciones.
+
+❌ Si la consulta cambia, debes modificar la entidad.
 
 ## Derivadas
-- 
+- Las Derived Queries (consultas derivadas) se generan automáticamente a partir del nombre del método en el repositorio. Spring Data JPA interpreta el nombre del método y genera la consulta correspondiente.
+```java
+public interface MovieRepository extends JpaRepository<Movie, Long> {
+    List<Movie> findByTitleContaining(String title);
+    List<Movie> findByReleaseYearBetween(int startYear, int endYear);
+}
+```
+**Ventajas:**
+
+✔ Simplicidad: No necesitas escribir SQL ni JPQL.
+
+✔ Rápida implementación.
+
+**Desventajas:**
+
+❌ Limitada en complejidad, ya que depende de las convenciones de nombres.
+
+❌ Puede volverse difícil de leer con nombres de métodos largos.
 
 ## Native (Pure SQL)
-- 
+- Las Native Queries permiten escribir consultas en SQL puro, en lugar de JPQL. Se utilizan cuando necesitas aprovechar características específicas del motor de base de datos.
+```java
+@Query(value = "SELECT * FROM movie WHERE title = ?1", nativeQuery = true)
+List<Movie> findByTitleNative(String title);
+```
+**Ventajas:**
+
+✔ Te permite usar funciones específicas de la base de datos.
+
+✔ Puedes optimizar mejor las consultas.
+
+**Desventajas:**
+
+❌ No es portable entre diferentes bases de datos.
+
+❌ No aprovecha el poder de JPA para la conversión automática de entidades.

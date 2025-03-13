@@ -109,3 +109,5 @@
         3. Mockup: Main y User
         4. DB: Tipo, estructura y volumen que maneje.
         5. RestTemplate: Manejo de datos de API de Java.
+
+- [ ] `Cascade`: Como borrar un borrow sin borrar el user y el book asociado.

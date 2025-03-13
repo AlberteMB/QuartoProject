@@ -96,4 +96,12 @@ public class Usuario {
 ## @Size:
 - Anotación de Bean Validation que se utiliza para validar que el tamaño de un campo (como una cadena o una colección) esté dentro de los límites especificados.
 
+## @Pattern
+- Obligar a que una password, por ejemplo, cumpla unas reglas concretas.
+```java
+@Pattern(
+            regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$",
+            message = "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character")
+```            
+
             

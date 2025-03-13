@@ -69,7 +69,9 @@ website:
       - text: "Film Advisor"
         contents:        
           - text: "Notes"
-            href: 09-film-advisor/uml.qmd
+            href: 09-film-advisor/index.qmd
+          - test: "Classes"
+            href: 09-film-advisor/classes.qmd  
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"
