@@ -29,4 +29,8 @@
 
     - **application.properties:** spring.jpa.defer-datasource-initialization=true.
 
-    
+---
+
+:::{.callout-important title="Config de la conexión a la DB"}
+- En H2, cuando ponemos la ruta del archivo para acceder, no se puede usar rulas absolutas, sino `rutas relativas`.
+:::

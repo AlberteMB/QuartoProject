@@ -1,6 +1,6 @@
-# Queries
+# JPQL - Queries
 
-## JPQL
+## JPQL - Keywords
 - | Keyword            | Sample                                      | JPQL snippet                                                                 |
 |--------------------|---------------------------------------------|------------------------------------------------------------------------------|
 | **Distinct**       | `findDistinctByLastnameAndFirstname`        | `select distinct … where x.lastname = ?1 and x.firstname = ?2`               |
@@ -29,7 +29,23 @@
 | **False**          | `findByActiveFalse()`                       | `… where x.active = false`                                                   |
 | **IgnoreCase**     | `findByFirstnameIgnoreCase`                 | `… where UPPER(x.firstname) = UPPER(?1)`                                     |
 
-## Named
+---
+
+## repository query keywords
+
+| Keyword                                      | Description                                                                                                                                                                                                 |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `find…By`, `read…By`, `get…By`, `query…By`, `search…By`, `stream…By` | General query method returning typically the repository type, a `Collection`, `Streamable` subtype, or a result wrapper like `Page`, `GeoResults`, or store-specific results. Can be used as `findBy…`, `findMyDomainTypeBy…`, etc. |
+| `exists…By`                                  | Exists projection, returning typically a boolean result.                                                                                                                                                    |
+| `count…By`                                   | Count projection returning a numeric result.                                                                                                                                                                |
+| `delete…By`, `remove…By`                     | Delete query method returning either no result (`void`) or the delete count.                                                                                                                                |
+| `…First<number>…`, `…Top<number>…`           | Limits the query results to the first `<number>` of results. This keyword can be placed anywhere between `find` (or other keywords) and `by`.                                                                 |
+| `…Distinct…`                                 | Uses a distinct query to return only unique results. Consult store-specific documentation for support. This keyword can be placed anywhere between `find` (or other keywords) and `by`.                      |
+
+---
+
+## Tipos de Queries
+### Named
 - Las Named Queries son consultas predefinidas que se asocian con una entidad y se declaran con la anotación @NamedQuery o @NamedQueries en la clase de entidad, o dentro del archivo `orm.xml`.
 ```java
 @Entity
@@ -56,7 +72,7 @@ public class Movie {
 
 ❌ Si la consulta cambia, debes modificar la entidad.
 
-## Derivadas
+### Derivadas
 - Las Derived Queries (consultas derivadas) se generan automáticamente a partir del nombre del método en el repositorio. Spring Data JPA interpreta el nombre del método y genera la consulta correspondiente.
 ```java
 public interface MovieRepository extends JpaRepository<Movie, Long> {
@@ -76,7 +92,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 ❌ Puede volverse difícil de leer con nombres de métodos largos.
 
-## Native (Pure SQL)
+### Native (Pure SQL)
 - Las Native Queries permiten escribir consultas en SQL puro, en lugar de JPQL. Se utilizan cuando necesitas aprovechar características específicas del motor de base de datos.
 ```java
 @Query(value = "SELECT * FROM movie WHERE title = ?1", nativeQuery = true)

@@ -137,3 +137,36 @@ Usar `FetchType.LAZY` es generalmente la mejor opción para evitar consultas inn
 - Definir anotaciones.
 - Definir JoinColumn o Jointable
 - Configurar las anotaciones.
+
+# Cascade en Spring Boot (JPA)
+
+ Esta propiedad define cómo las operaciones realizadas en una entidad se propagan a las entidades relacionadas. 
+
+---
+
+## Tipos de Cascade
+
+1. **`CascadeType.PERSIST`**:
+   - Cuando guardas una entidad (usando `entityManager.persist()` o `repository.save()`), también se guardan las entidades relacionadas.
+   - **Ejemplo**: Si tienes una entidad `Padre` con una relación `@OneToMany` a `Hijo`, al guardar `Padre`, también se guardarán todos los `Hijo` relacionados.
+
+2. **`CascadeType.MERGE`**:
+   - Cuando actualizas una entidad (usando `entityManager.merge()` o `repository.save()`), también se actualizan las entidades relacionadas.
+   - **Ejemplo**: Si actualizas `Padre`, los cambios en los `Hijo` relacionados también se reflejarán en la base de datos.
+
+3. **`CascadeType.REMOVE`**:
+   - Cuando eliminas una entidad (usando `entityManager.remove()` o `repository.delete()`), también se eliminan las entidades relacionadas.
+   - **Ejemplo**: Si eliminas `Padre`, todos los `Hijo` relacionados también se eliminarán.
+
+4. **`CascadeType.REFRESH`**:
+   - Cuando refrescas una entidad (usando `entityManager.refresh()`), también se refrescan las entidades relacionadas.
+   - **Ejemplo**: Si refrescas `Padre`, los datos de los `Hijo` relacionados se actualizarán con los datos de la base de datos.
+
+5. **`CascadeType.DETACH`**:
+   - Cuando desvinculas una entidad del contexto de persistencia (usando `entityManager.detach()`), también se desvinculan las entidades relacionadas.
+   - **Ejemplo**: Si desvinculas `Padre`, los `Hijo` relacionados también se desvincularán.
+
+6. **`CascadeType.ALL`**:
+   - Es un atajo que incluye todos los tipos de cascada mencionados anteriormente (`PERSIST`, `MERGE`, `REMOVE`, `REFRESH`, `DETACH`).
+   - **Ejemplo**: Si usas `CascadeType.ALL` en la relación `@OneToMany` entre `Padre` e `Hijo`, cualquier operación realizada en `Padre` se propagará a `Hijo`.
+
