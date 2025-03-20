@@ -64,3 +64,8 @@ Si solo almacenamos metadatos, un volumen realista en PostgreSQL sería entre 25
 
 ## RestTemplate
 - 
+
+## Implementar:
+- [ ] useNavigate
+- [ ] Nueva view para search.
+- [ ] 

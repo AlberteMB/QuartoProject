@@ -1,0 +1,12 @@
+# Tasks
+## Frontend
+- [ ] Config panels
+- [ ] useNavigate
+- [ ] New view "Search"
+
+---
+
+## Backend
+- [ ] JUnit
+- [ ] Postman CRUD
+- [ ] Endpoints

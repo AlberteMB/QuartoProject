@@ -113,6 +113,9 @@
 - [x] `Cascade`: Como borrar un borrow sin borrar el user y el book asociado.
 
 ## Semana 12
-- [ ] Java Mission Control (JMC): Para revisar el consumo del programa de Java.
+- [x] Java Mission Control (JMC): Para revisar el consumo del programa de Java.
 - [ ] Hibernate y Tomcat.
 - [ ] async y await.
+
+- [ ] CORS (Cross-Origin Resource Sharing): Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo.
+- [ ] Isomorphic: Client/Server (browser, node.js).

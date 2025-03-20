@@ -72,6 +72,8 @@ website:
             href: 09-film-advisor/index.qmd
           - test: "Classes"
             href: 09-film-advisor/classes.qmd  
+          - test: "Tasks"
+            href: 09-film-advisor/tasks.qmd
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"

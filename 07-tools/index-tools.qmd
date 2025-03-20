@@ -13,3 +13,8 @@
     - No es recomendable trabajar siempre con stash.
 
 ## git worktree
+- 
+
+
+## Java Mission Control (JMC)
+- App para controlar el consumo de Java.
