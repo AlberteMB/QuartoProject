@@ -31,7 +31,7 @@ Este documento describe las entidades JPA que conforman el proyecto *Film Adviso
 - `movie`: Película (`@ManyToOne` con `Movie`)
 - `rating`: Valoración del usuario ("me gusta" o "no me gusta")
 
-### **WatchlistMovie** (Entidad)
+### **Watchlist** (Entidad)
 - `id`: Identificador único
 - `user`: Usuario (`@ManyToOne` con `User`)
 - `movie`: Película (`@ManyToOne` con `Movie`)

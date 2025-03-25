@@ -15,9 +15,16 @@ What? What for? Why? How? How many (time, money)?
 ---
 
 ## Jerarquía en clases
-- Saber ver qué `clases pivotan` alrededor de otras.
+- Saber ver que `clases pivotan` alrededor de otras.
     - Imprescindible para la funcionalidad
     - Si otras pueden acomplarse sin perder sentido.
     - Las otras clases no pueden existir sin ella.
     - Responder a las preguntas: What, What for, Why, How, How many?
     - Las clases pivotales siempre están conectadas con el `user story`.
+
+## Pagination
+- Usamos objeto `Page` e interface `Pageable`.    
+- Operaciones comunes: Pageable, Sort y Limit.
+- `Page` = Container of metadata.
+- `Pageable` = Interface for pagination info.
+- `PageRequest` = Implementation of Pageable.

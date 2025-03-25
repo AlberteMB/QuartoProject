@@ -119,3 +119,24 @@
 
 - [ ] CORS (Cross-Origin Resource Sharing): Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo.
 - [ ] Isomorphic: Client/Server (browser, node.js).
+- [ ] Axios.
+- [ ] Props SX: Style Extended. Es una super Prop que permite aplciar estilos directamente a los componentes utulizando un objeto de estilo. 
+
+- [] Explicación recibir el evento. Desestructurar, etc.
+```js 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+```  
+
+- [ ] useLocation
+
+## Semana 13
+
+### Projects en los que trabajaremos
+
+- **userBorrowBookBack**: Backend for React. (.jar)
+- **userBorrowBookPagination**: Only for pagination.
+- **BooksPageable**: Example pagination with Thymeleaf.
+- **userBorrowBookFilter**: Just for filter. 

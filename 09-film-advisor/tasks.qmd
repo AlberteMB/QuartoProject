@@ -3,10 +3,13 @@
 - [ ] Config panels
 - [ ] useNavigate
 - [ ] New view "Search"
+- [ ] Cambiar Grid en el render.
+- [ ] Try & Catch
 
 ---
 
 ## Backend
+- [x] UML completar el 0.1.
 - [ ] JUnit
 - [ ] Postman CRUD
 - [ ] Endpoints
