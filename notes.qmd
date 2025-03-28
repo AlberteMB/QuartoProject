@@ -140,3 +140,14 @@
 - **userBorrowBookPagination**: Only for pagination.
 - **BooksPageable**: Example pagination with Thymeleaf.
 - **userBorrowBookFilter**: Just for filter. 
+
+### Deploy
+#### Spring Boot
+- [ ] **AWS**: Elastic BeanStalk. Creamos .jar (Hard)
+        - Local jar --> S3 --> Elastic Beanstalk (Jar + enviroment + deploy)
+- [ ] **Railway**: Creamos .jar (Medium)
+
+#### React
+- [ ] GH--> AWS: Amplify
+        - 
+- [ ] GH--> Netlify (Easy)

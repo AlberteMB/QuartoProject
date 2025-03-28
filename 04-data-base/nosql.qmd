@@ -1,0 +1,16 @@
+# No SQL
+## Fundamentals
+- First Queries.
+- Single Table Approach.
+- No-realtional.
+- *ACID*.
+
+## Elements in table
+- **Item**: Each element in the table.
+- **Primary Key**: Partition Key + Sort Key.
+- **Partition Key**: as a regular ID.
+- **Sort Key**: Defines kind of Item.
+- **Atributtes**: Specific attributes for each Item.
+
+## DynamoDB (AWS)
+- 

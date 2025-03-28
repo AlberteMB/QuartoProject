@@ -1,4 +1,4 @@
-# Objects
+# Classes
 ## POJO (Plain Old Java Object)
 - Es una clase Java simple que no está ligada a ninguna tecnología o framework específico. No extiende clases predefinidas ni implementa interfaces especiales.
 Características:
@@ -40,7 +40,7 @@ Características:
     2. ***Non Static (inner class):*** Se define dentro de otra clase y tiene acceso a las instancias de la clase externa. 
 
 ## Clase abstracta:
-- Es una clase que no se puede instanciar directamente. En su lugar, se utiliza como una plantilla o base para otras clases que sí pueden ser instanciadas. Las clases abstractas están diseñadas para ser extendidas (heredadas) por subclases concretas.
+- Es una clase que no se puede instanciar directamente. En su lugar, se utiliza como una plantilla o base para otras clases que sí pueden ser instanciadas. Las clases abstractas están diseñadas para ser extendidas (heredadas) por subclases concretas. Tiene métodos implementados y atributos según el nivel de abstracción.
 - Lista de algunos atributos típicos en una clase abstracta:
     - Id
     - Version
@@ -119,3 +119,13 @@ Características:
 | **Enumeración (Enum)**  | Clase que representa un grupo de constantes.                                    |
 | **Excepción**           | Clase personalizada para manejar errores específicos.                           |
 | **Servicio**            | Clase que contiene la lógica de negocio en aplicaciones empresariales.          |    
+
+## Keywords for each type of class
+### Interface
+- Action, features, verbs, contract.
+### Abstract (It has implemented methods and attributes)
+- Template
+### Superclass
+- generalization
+### Class
+- Entities, concrete, specialitation.

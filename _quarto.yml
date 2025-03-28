@@ -46,6 +46,8 @@ website:
             href: 04-data-base/postgresql.qmd  
           - text: "Queries"
             href: 04-data-base/jpql-queries.qmd  
+          - text: "No SQL"
+            href: 04-data-base/no-sql.qmd  
       - text: "Tests"  
         contents: 
           - text: "Introduction"

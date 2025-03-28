@@ -40,7 +40,7 @@ spring:
 
 | **Acción**                  | **Comando**                                                                                  | **Descripción**                                                        |
 |-----------------------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| **Iniciar sesión**          | `sudo -u postgres psql`                                                                       | Accede a PostgreSQL como usuario `postgres`.                          |
+| **Iniciar sesión**          | `sudo -i -u postgres psql`                                                                       | Accede a PostgreSQL como usuario `postgres`.                          |
 |                             | `psql -U <usuario> -d <base_de_datos>`                                                       | Accede con un usuario específico.                                     |
 | **Ver bases de datos**      | `\l`                                                                                         | Lista todas las bases de datos.                                       |
 | **Conectar a una base**     | `\c <nombre_de_la_base>`                                                                     | Conéctate a una base de datos específica.                             |
