@@ -91,12 +91,12 @@ Postman(Mock) -> endpoint -> axios.get (crea{JSON}) -> useEffect ({JSON})-> useS
 - 
 
 ### Crear un objeto literal:
-    - No lleva comillas, al contrario que un JSON.
+- No lleva comillas, al contrario que un JSON.
 ``` bash
 const object = {
-                name: name; 
-                age: 4;
-                }
+   name: name; 
+   age: 4;
+   }
 ```
 
 Setea el nuevo estado del re-render que es un objeto nuevo literal que está creando.
@@ -107,7 +107,7 @@ setFormData ((---)) => ({
 ```
 ---
 ## Using {}, [], ()...
- | Symbol    | Use Case                  | Example                                                   |
+| Symbol    | Use Case                  | Example                                                   |
    | --------- | ------------------------- | --------------------------------------------------------- |
    | `{}`      | Object destructuring      | `const { name, age } = obj;`                              |
    | `[]`      | Array destructuring       | `const [first, second] = arr;`                            |
@@ -148,6 +148,8 @@ setFormData ((---)) => ({
 
 ![Estados del formulario](images/responding_to_input_flow.webp)
 
+---
+
 ## Enfoques Declarativo e Imperativo.
 ### Declarativo
 - Describé `qué` quieres que suceda en la UI, sin preocuparte por el `cómo` se implementa.
@@ -159,3 +161,19 @@ setFormData ((---)) => ({
    - Se manipula el DOM manualmente, lo que lleva a código más complejo.
    - Común en JQuery y JavaScript vanilla.
    - Código `menos legible` y difícil de mantener.    
+
+---
+
+## Steps for adding a link with image in userBorrowBook PRA
+
+1. **Button**
+2. **Dynamic route**
+3. **Component**
+4. **Navigate/useLocation**
+5. **Image**
+   - assets
+   - links- JSON
+   - AI create
+   - Improve model
+
+- [ ] Select en React.   

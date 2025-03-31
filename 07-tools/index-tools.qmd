@@ -18,3 +18,8 @@
 
 ## Java Mission Control (JMC)
 - App para controlar el consumo de Java.
+
+## Tras ejecutar jar
+- No se verá en consola. 
+- Para cerrarlo, mirar los procesos activos `ps aux | grep java`
+- Matar el proceso `kill -SIGTERM <PID>`

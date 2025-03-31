@@ -28,3 +28,15 @@ What? What for? Why? How? How many (time, money)?
 - `Page` = Container of metadata.
 - `Pageable` = Interface for pagination info.
 - `PageRequest` = Implementation of Pageable.
+
+## Hibernate
+- Es un ORM (Object-Relational Mapping) que mapea objetos Java a tablas de DB.
+- Se integra via Spring Data JPA.
+
+## Tomcat
+- Un servidor web (contenedor Servlet) para desplegar apps web.
+- En Spring Boot viene embebido por defecto.
+- Spring boot también soporta Jetty o Undetow.
+
+## CORS (Cross-Origin Resource Sharing)
+- Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo. `Tenerlo en cuenta al trabajar con Spring Boot + React`

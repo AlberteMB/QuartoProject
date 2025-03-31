@@ -114,15 +114,15 @@
 
 ## Semana 12
 - [x] Java Mission Control (JMC): Para revisar el consumo del programa de Java.
-- [ ] Hibernate y Tomcat.
+- [x] Hibernate y Tomcat.
 - [ ] async y await.
 
-- [ ] CORS (Cross-Origin Resource Sharing): Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo.
+- [x] CORS (Cross-Origin Resource Sharing): Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo.
 - [ ] Isomorphic: Client/Server (browser, node.js).
 - [ ] Axios.
 - [ ] Props SX: Style Extended. Es una super Prop que permite aplciar estilos directamente a los componentes utulizando un objeto de estilo. 
 
-- [] Explicación recibir el evento. Desestructurar, etc.
+- [ ] Explicación recibir el evento. Desestructurar, etc.
 ```js 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -151,3 +151,7 @@
 - [ ] GH--> AWS: Amplify
         - 
 - [ ] GH--> Netlify (Easy)
+
+## Semana 14
+- [ ] useLayoutEffect
+- [ ] Buscar: Amazon Bedrock Deepseek
