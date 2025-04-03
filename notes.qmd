@@ -48,6 +48,7 @@
 - Servlet. Picnic
 - ID compuestas. Picnic
 - JPQL: Lenguaje SQL de JPA para queries en oneliner.
+
 ---
 
 ## Semana 6
@@ -56,6 +57,7 @@
 - Continuar práctica Spring Boot con el UML de `pronunciationApp-v0.2-model-1.png`.
 
 - Deep Seek en local
+
 ---
 
 ## Semana 7
@@ -65,6 +67,7 @@
 - [x] Clases anidadas.
 
 - Pronunciation, Word, StageWord, Stage, GameProgress
+
 ---
 
 ## Semana 8
@@ -72,6 +75,8 @@
 - En React pasamos funciones y no las invocamos.
 - Spring Boot: En las relaciones en @OneToMany, @ManyToOne y @ManyToMany, en la base de datos no se guardan los array. 
 - No los veremos si no usamos otro tipo de de anotación. 
+
+---
 
 ## Semana 9
 - [x] Definición de `Imperativa` y `declarativa` en React.
@@ -94,6 +99,8 @@
 - [ ] Gestión del state en blockchain.
 - [ ] API: WEB3.js, ethers.js.
 
+---
+
 ## Semana 10
 - [x] 4 Tipos de queries: 
     1. Derivadas (subject + predicate).
@@ -112,15 +119,17 @@
 
 - [x] `Cascade`: Como borrar un borrow sin borrar el user y el book asociado.
 
+---
+
 ## Semana 12
 - [x] Java Mission Control (JMC): Para revisar el consumo del programa de Java.
 - [x] Hibernate y Tomcat.
-- [ ] async y await.
+- [x] async y await.
 
 - [x] CORS (Cross-Origin Resource Sharing): Mecanismo de seguridad implementado en los navegadores web que permite a un servidor restringir cómo se puede solicitar resursos desde un dominio diferente al suyo.
 - [ ] Isomorphic: Client/Server (browser, node.js).
-- [ ] Axios.
-- [ ] Props SX: Style Extended. Es una super Prop que permite aplciar estilos directamente a los componentes utulizando un objeto de estilo. 
+- [x] Axios.
+- [x] Props SX: Style Extended. Es una super Prop que permite aplciar estilos directamente a los componentes utulizando un objeto de estilo. 
 
 - [ ] Explicación recibir el evento. Desestructurar, etc.
 ```js 
@@ -129,8 +138,7 @@
         setFormData({ ...formData, [name]: value });
     };
 ```  
-
-- [ ] useLocation
+---
 
 ## Semana 13
 
@@ -144,14 +152,34 @@
 ### Deploy
 #### Spring Boot
 - [ ] **AWS**: Elastic BeanStalk. Creamos .jar (Hard)
-        - Local jar --> S3 --> Elastic Beanstalk (Jar + enviroment + deploy)
+- [ ] Local jar --> S3 --> Elastic Beanstalk (Jar + enviroment + deploy)
 - [ ] **Railway**: Creamos .jar (Medium)
 
 #### React
 - [ ] GH--> AWS: Amplify
-        - 
 - [ ] GH--> Netlify (Easy)
 
+---
+
 ## Semana 14
-- [ ] useLayoutEffect
 - [ ] Buscar: Amazon Bedrock Deepseek
+
+- [ ] useLayoutEffect
+- [ ] useContext  
+- [ ] useLocation
+- [ ] Revisar estructura de service en userBorrowBooksFront.
+- [ ] Select
+
+- [ ] @PathVariable vs @QParam (o @QueryParam. no estoy seguro).
+- [ ] @RequestParam
+- [ ] Filter en Java. Specification.
+- [ ] Select en React.   
+
+- **Specification**: Para crear predicados de las queries.
+1. Params
+2. Related entities. Create JOIN objects.
+3. Queries: builder.
+4. Arrow function: (Parámetros que pasamos) y creamos predicate.
+5. Create ALL predicates.
+
+- [ ] Builder para crear objetos. Por qué usarlo.

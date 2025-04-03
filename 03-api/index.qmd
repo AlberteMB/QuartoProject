@@ -1,0 +1,39 @@
+# API
+
+## AXIOS
+- Biblioteca para peticiones HTTP desde navegadores y Node.js. Alternativa moderna a fetch(), que es nativo de JS.
+
+### Características principales de Axios
+1. **Soporte para navegadores y Node.js:** Funciona tanto en el cliente como en el servidor.
+
+2. **Promesas (Promises):** Usa el sistema de promesas para manejar operaciones asíncronas.
+
+3. **Interceptores:** Permite interceptar y modificar peticiones y respuestas.
+
+4. **Cancelación de peticiones:** Soporta la cancelación de peticiones mediante tokens.
+
+5. **Protección CSRF:** Protección integrada contra ataques CSRF.
+
+6. **Transformación automática de datos:** Convierte automáticamente los datos JSON.
+
+7. **Barra de progreso:** Soporta eventos de progreso para subidas/descargas.
+
+---
+
+## await & async
+- **await**: Pausa la ejecución de la función hasta que la Promesa se resuelva (éxito o error).
+
+- **async**: Declara que una función es asíncrona y siempre devuelve una Promesa.
+
+## Flujo
+1. **Declaras una función async** → Esto permite usar await dentro.
+
+2. **Haces la petición con await axios.get/post/put/delete** → Espera a que la petición termine.
+
+3. **Manejas la respuesta** → Si es exitosa, obtienes los datos.
+
+4. **Manejas errores con catch** → Si falla, capturas el error.
+
+---
+
+
