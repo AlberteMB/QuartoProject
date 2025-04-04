@@ -13,3 +13,4 @@
 - [ ] JUnit
 - [ ] Postman CRUD
 - [ ] Endpoints
+- [ ] Queries dinámicas con Specifications y creteriaBuilder.

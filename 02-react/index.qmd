@@ -105,14 +105,18 @@ setFormData ((---)) => ({
 
 }))
 ```
+
 ---
+
 ## Using {}, [], ()...
-| Symbol    | Use Case                  | Example                                                   |
-   | --------- | ------------------------- | --------------------------------------------------------- |
-   | `{}`      | Object destructuring      | `const { name, age } = obj;`                              |
-   | `[]`      | Array destructuring       | `const [first, second] = arr;`                            |
-   | `()`      | Function parameters       | `const func = ({ name }) => console.log(name);`           |
-   | No Symbol | Invalid for destructuring | `const name, age = obj;` (This will throw a syntax error) |
+
+| Symbol     | Use Case                  | Example                                                   |
+|------------|---------------------------|-----------------------------------------------------------|
+| `{}`       | Object destructuring      | `const { name, age } = obj;`                              |
+| `[]`       | Array destructuring       | `const [first, second] = arr;`                            |
+| `()`       | Function parameters       | `const func = ({ name }) => console.log(name);`           |
+| No Symbol  | Invalid for destructuring | `const name, age = obj;` (This will throw a syntax error) |
+
    
 ## Explanation   
    | Syntax Element         | `x => x * x`                      | `(x) => (x * x)`             |

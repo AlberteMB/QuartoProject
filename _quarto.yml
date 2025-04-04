@@ -44,10 +44,10 @@ website:
             href: 04-data-base/sql.qmd
           - text: "PostgreSQL"
             href: 04-data-base/postgresql.qmd  
-          - text: "Queries"
+          - text: "JPA Queries"
             href: 04-data-base/jpql-queries.qmd  
           - text: "No SQL"
-            href: 04-data-base/no-sql.qmd  
+            href: 04-data-base/nosql.qmd  
       - text: "Tests"  
         contents: 
           - text: "Introduction"
@@ -72,9 +72,9 @@ website:
         contents:        
           - text: "Notes"
             href: 09-film-advisor/index.qmd
-          - test: "Classes"
+          - text: "Classes"
             href: 09-film-advisor/classes.qmd  
-          - test: "Tasks"
+          - text: "Tasks"
             href: 09-film-advisor/tasks.qmd
       - text: "Cheat Sheet"
         href: cheatSheet.qmd

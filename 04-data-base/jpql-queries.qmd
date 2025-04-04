@@ -109,3 +109,19 @@ List<Movie> findByTitleNative(String title);
 ❌ No es portable entre diferentes bases de datos.
 
 ❌ No aprovecha el poder de JPA para la conversión automática de entidades.
+
+---
+
+## Specification (Queries dinámicas)
+
+- **Specification**: Para crear predicados de las queries **dinámicas**.
+1. Which Params
+2. Related entities. Create JOIN objects.
+3. Query: Builder.
+4. Arrow function: (root, query, criteriaBuilder) -> (predicate)
+5. Body method: create ALL Predicates.
+
+```java
+(Root<CLASS> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder)
+```
+- ? = genérico.

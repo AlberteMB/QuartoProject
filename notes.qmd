@@ -175,11 +175,11 @@
 - [ ] Filter en Java. Specification.
 - [ ] Select en React.   
 
-- **Specification**: Para crear predicados de las queries.
-1. Params
+- **Specification**: Para crear predicados de las queries **dinámicas**.
+1. Which Params
 2. Related entities. Create JOIN objects.
-3. Queries: builder.
-4. Arrow function: (Parámetros que pasamos) y creamos predicate.
-5. Create ALL predicates.
+3. Query: Builder.
+4. Arrow function: (root, query, criteriaBuilder) -> (predicate)
+5. Body method: create ALL Predicates.
 
 - [ ] Builder para crear objetos. Por qué usarlo.
