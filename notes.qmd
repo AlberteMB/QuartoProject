@@ -183,3 +183,19 @@
 5. Body method: create ALL Predicates.
 
 - [ ] Builder para crear objetos. Por qué usarlo.
+
+
+## Semana 15
+## Desacoplando usando useContext
+1. Create JS Service.
+2. Create jsx component hooks.
+    - Create context.
+    - usecontext
+    -apiService -> Provider
+3. Import     
+
+bookService (s)
+bookServiceContext (c)
+useBookService (h)
+bookserviceProvider (p)    
+
