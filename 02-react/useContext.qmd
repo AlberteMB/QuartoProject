@@ -1,0 +1,53 @@
+# useContext
+- Permite compartir datos entre componentes sin necesidad de pasar props manualmente a través de múltriples niveles del árbol de componentes.
+
+## Steps
+
+1. **Crear el context**
+    - Crearemos un contenedor con React.createContext para los datos que queremos compartir.
+
+    ```javaScript
+    import React, { createContext } from 'react';
+
+    // Crear un contexto
+    const MyContext = createContext(null);
+    ```
+
+2. **Provider**
+    - El provider es el responsable de suministrar el valor al contexto. Envolver los componentes que necesitan acceso al context dentro de un provider.
+
+        *Aquí el valor del context (value) se pasa como prop al Provider. Todos los componentes dentro del árbol tendrán acceso a este valor.*
+
+    ```javaScript
+    import React, { useState } from 'react';
+
+    const MyContext = createContext(null);
+
+    function App() {
+    const [value, setValue] = useState("Hola Mundo");
+
+    return (
+        <MyContext.Provider value={value}>
+        <ChildComponent />
+        </MyContext.Provider>
+    );
+    }
+    ```
+
+3. **Consumir el contexto con useContext**
+    - Los componentes que neecsiten acceder al valor del contexto pueden utilizar el hook useContext.
+
+        *El hook useContext toma como argumento el contexto creando con createContext y devuelve su valor actual.*
+
+    ```javaScript
+    import React, { useContext } from 'react';
+
+    function ChildComponent() {
+    const value = useContext(MyContext);
+
+    return <div>El valor del contexto es: {value}</div>;
+    }
+    ```
+
+
+

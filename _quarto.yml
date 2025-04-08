@@ -30,6 +30,8 @@ website:
             href: 02-react/components.qmd  
           - text: "Hooks"
             href: 02-react/hooks.qmd
+          - text: "useContext"
+            href: 02-react/usecontext.qmd  
           - text: "Functions"
             href: 02-react/functions.qmd    
           - text: "HTML"
