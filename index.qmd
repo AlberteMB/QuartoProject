@@ -31,6 +31,8 @@ title: "GENERAL"
 - `feat:` Código de proyecto (Creando un controller, query, service...)
 - `fix:` Corrección de errores.
 
+---
+
 ## Pareto 
 - Regla 80/20. El 80% de los resultados provienen del 20% de las causas.
 
@@ -39,9 +41,8 @@ title: "GENERAL"
 - Distribución de ingresos equitativa 
 - Comunidades pequeñas
 :::
+
 ---
-
-
 
 ## SSR (Server-Side Rendering) y CSR (Client-Side Rendering)
 
@@ -53,4 +54,9 @@ title: "GENERAL"
 | **Interactividad**      | Limitada (requiere JS adicional) | Muy fluida                        |
 | **Carga del servidor**  | Mayor                            | Menor                             |
 | **Uso típico**          | Páginas con contenido estático   | Aplicaciones web dinámicas (SPA)  |
+
+---
+
+
+
 

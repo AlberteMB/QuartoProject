@@ -180,3 +180,13 @@ setFormData ((---)) => ({
    - AI create
    - Improve model
 
+---
+
+## New Feature en React
+0. What the feature do
+1. Java works tested with curl.
+2. Step by Step
+3. Views?? Check all possible errors.
+4. States
+5. Render: BL (Pseudo-code)   
+

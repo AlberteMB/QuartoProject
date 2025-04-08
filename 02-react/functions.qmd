@@ -34,3 +34,10 @@ function Form() {
         
 ## Router DOM
 - 
+
+## Filter
+Pasos: 
+  1. Service Borrow {endpoint} /filter
+  2. BorrowService : Filterborrow : {}
+  3. Create Component.
+  4. form fields

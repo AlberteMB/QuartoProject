@@ -1,0 +1,9 @@
+# Test
+
+## Debugging
+|Where?     | who?  |
+|-----------|-------|
+|Component  | Ext. React debugger in Chrome|
+|Axios      | ---   |
+|Context    | Ext. React debugger in Chrome|
+|Controller | Postman, curl, test|

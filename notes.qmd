@@ -184,18 +184,35 @@
 
 - [ ] Builder para crear objetos. Por qué usarlo.
 
+---
 
 ## Semana 15
-## Desacoplando usando useContext
-1. Create JS Service.
+
+### Desacoplando usando useContext
+1. Create JS.
 2. Create jsx component hooks.
     - Create context.
     - usecontext
     -apiService -> Provider
-3. Import     
+3. Import to the component     
 
 bookService (s)
 bookServiceContext (c)
 useBookService (h)
 bookserviceProvider (p)    
+
+### Views with filter in userBorrowBooksFront
+1. Filter + nada.
+2. Filter + error
+3. Filter + loading
+4. Filter + FilteredBorrows
+
+**Render**
+<>
+{ Error }
+{ Loading }
+{ Filtered.map() }
+</>
+
+
 
