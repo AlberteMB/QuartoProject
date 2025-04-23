@@ -57,6 +57,22 @@ title: "GENERAL"
 
 ---
 
+## Starting project with hilla
+- Tech Stack (Modulith)
+- Documentation
+- Arquitecture
+- Project Structure (Skeleton)
+- UML
+- Core objects = Domains
+- Intro Hilla
+- Front
+- Data Structure
+
+- Features???
+- Client needs to find the best features.
+   - Vocabulary
+   - Low Fidelity Wireframe
+   - Business Model
 
 
 

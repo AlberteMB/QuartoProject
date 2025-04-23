@@ -12,5 +12,20 @@
 - **Sort Key**: Defines kind of Item.
 - **Atributtes**: Specific attributes for each Item.
 
-## DynamoDB (AWS)
-- 
+### Example NoSQL Table: `LibraryItems`
+
+| Item ID       | Sort Key       | Title                          | Author/Editor       | Year | Genre         | ISBN / ISSN     |
+|---------------|----------------|--------------------------------|----------------------|------|----------------|------------------|
+| `BOOK#0001`   | `BOOK`         | *The Hobbit*                   | J.R.R. Tolkien       | 1937 | Fantasy        | 978-0547928227   |
+| `BOOK#0002`   | `BOOK`         | *1984*                         | George Orwell        | 1949 | Dystopian      | 978-0451524935   |
+| `MAG#2023-05` | `MAGAZINE`     | *National Geographic May 2023* | Susan Goldberg (ed.)| 2023 | Science/Nature | 0744-460X        |
+| `DVD#045`     | `DVD`          | *The Matrix*                   | Wachowski Sisters    | 1999 | Sci-Fi         | N/A              |
+
+#### Explanation of Table Elements
+
+- **Item**: Each row represents one item in the library (book, magazine, DVD, etc).
+- **Primary Key**: Combination of `Item ID` (Partition Key) and `Sort Key`.
+- **Partition Key**: `Item ID`, which acts like a unique identifier for each item.
+- **Sort Key**: Defines the type of item: `BOOK`, `MAGAZINE`, `DVD`, etc.
+- **Attributes**: Additional columns like Title, Author/Editor, Year, Genre, and ISBN/ISSN.
+

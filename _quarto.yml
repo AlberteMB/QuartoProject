@@ -50,6 +50,12 @@ website:
             href: 04-data-base/jpql-queries.qmd  
           - text: "No SQL"
             href: 04-data-base/nosql.qmd  
+          - text: "Dynamo DB"
+            href: 04-data-base/dynamodb.qmd
+          - text: "Mongo DB"
+            href: 04-data-base/mongodb.qmd   
+          - text: "Redis"
+            href: 04-data-base/redis.qmd   
       - text: "Tests"  
         contents: 
           - text: "Introduction"
