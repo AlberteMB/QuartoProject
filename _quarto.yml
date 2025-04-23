@@ -78,6 +78,10 @@ website:
             href: 09-film-advisor/classes.qmd  
           - text: "Tasks"
             href: 09-film-advisor/tasks.qmd
+      - text: "Vaadin"
+        contents:
+        - text: "Introduction"
+          href: 10-vaadin/index.qmd      
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"
