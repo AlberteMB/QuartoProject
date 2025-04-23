@@ -216,5 +216,6 @@ bookserviceProvider (p)
 
 ## Semana 16
 
+- SAX : Redis de Dynamo DB.
 
 
