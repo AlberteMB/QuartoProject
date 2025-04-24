@@ -216,6 +216,9 @@ bookserviceProvider (p)
 
 ## Semana 16
 
-- SAX : Redis de Dynamo DB.
+- DAX : Redis de Dynamo DB.
+
+
+
 
 

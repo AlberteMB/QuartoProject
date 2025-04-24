@@ -1,1 +1,41 @@
 # Dynamo DB
+## Config de Dynamo DB en Vaadin.
+- Dependencia SDK, config y credenciales.
+
+# Flujo de datos desde TypeScript hasta DynamoDB
+
+```plaintext
+┌──────────────┐
+│ .tsx (React) │
+└──────┬───────┘
+       │
+       ▼
+┌─────────────────────┐
+│ Objeto literal (JS) │
+└──────┬──────────────┘
+       │ JSON.stringify
+       ▼
+┌──────────────┐
+│ JSON (Texto) │
+└──────┬───────┘
+       │ (Enviado vía Web Service)
+       ▼
+┌────────────────────────────┐
+│ Java: Map<String, Object>  │
+└──────┬─────────────────────┘
+       │ Mapper
+       ▼
+┌────────────────────────────────────┐
+│ Java: Map<String, AttributeValue> │
+└──────┬─────────────────────────────┘
+       │ putItem (AWS SDK)
+       ▼
+┌──────────────────────────────────────────────┐
+│ DynamoDB Item                                │
+│ {                                            │
+│   "clave": { "S": "valor" },                 │
+│   "numero": { "N": "123" },                  │
+│   ...                                        │
+│ }                                            │
+└──────────────────────────────────────────────┘
+```
