@@ -218,6 +218,9 @@ bookserviceProvider (p)
 
 - DAX : Redis de Dynamo DB.
 
+## Semana 17
+
+- 
 
 
 

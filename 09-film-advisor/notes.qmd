@@ -1,0 +1,12 @@
+# Notes
+
+## UserMovieStatus
+
+### Generate MovieId
+- Generate MovieId in Repo.
+```java
+UserMovieStatus status = new UserMovieStatus();
+status.setTitle("Interstellar");
+status.setYear(2014);
+status.generateMovieId();
+```

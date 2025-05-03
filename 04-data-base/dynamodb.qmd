@@ -39,3 +39,105 @@
 │ }                                            │
 └──────────────────────────────────────────────┘
 ```
+---
+
+## Ejemplo de método para filtrar por platform y genre.
+```java
+@Override
+public List<Movie> findByPlatformAndGenre(String platform, Movie.Genre genre) {
+    Key key = Key.builder().partitionValue(platform).build();
+
+    QueryConditional queryConditional = QueryConditional.keyEqualTo(key);
+
+    List<Movie> results = new ArrayList<>();
+
+    SdkIterable<Page<Movie>> pages = movieTable.query(r -> r.queryConditional(queryConditional));
+
+    for (Page<Movie> page : pages) {
+        for (Movie movie : page.items()) {
+            if (movie.getGenres().contains(genre)) {
+                results.add(movie);
+            }
+        }
+    }
+
+    return results;
+}
+```
+
+### Key construction:
+```java
+// Using "platform" as Partition Key in my project
+Key key = Key.builder().partitionValue(platform).build();
+```
+- **Key:** Una clase específica de DynamoDB Enhanced Client para representar una PK o SK.
+- **Key.Builder():** Comienza a construir una clave.
+- **.partitionValue(platform):** Le pasamos la PK.
+- **.build():** Termina de construir la Key.
+
+---
+
+### QueryConditional Class
+- Es una clase que define la condición bajo la cual DynamoDB va a buscar elementos.
+       Ejemplos:
+       - "Quiero los elementos con esta PK"
+       - "Quiero los elementos con esta PK y un SK mayor que X"
+
+- **keyEqualTo(key):** Define una condición. ("Dame todos los ítems cuya PK sea igual a `plataform`")  
+
+```java
+QueryConditional queryConditional = QueryConditional.keyEqualTo(key);
+```
+
+---
+
+### SdkIterable
+```java
+SdkIterable<Page<Movie>> pages = movieTable.query(r -> r.queryConditional(queryConditional));
+```
+
+- **SdkIterable<Page<Movie>>:** Estructura que representa las páginas de resultados que devuelve DynamoDB. DynamoDB no suele dar todos los resultados de golpe, por eso iteramos con `Page`.
+
+- **movieTable.query(...):** Hacemos una consulta a la tabla usando la condición anterior.
+
+### Recorremos las páginas y filtramos por género.
+```java
+for (Page<Movie> page : pages) {
+    for (Movie movie : page.items()) {
+        if (movie.getGenres().contains(genre)) {
+            results.add(movie);
+        }
+    }
+}
+```
+- Recorremos todas las páginas (*for (Page<Movie> page : pages)*)
+
+- Luego recorremos los ítems dentro de cada página (page.items())
+
+- Y filtramos solo las películas que tienen ese género en su lista de géneros (movie.getGenres().contains(genre))
+
+---
+
+## DynamoDbTable class
+- En el repositorio:
+
+```java
+private final DynamoDbTable<Movie> movieTable;
+
+@Autowired
+public MovieRepositoryImpl(DynamoDbEnhancedClient enhancedClient) {
+    this.enhancedClient = enhancedClient;
+    this.movieTable = enhancedClient.table(tableName, TableSchema.fromBean(Movie.class));
+}
+```
+- **enhancedClient.table(...)** le dice al cliente que quieres trabajar con una tabla de DynamoDB.
+
+- Le pasas:
+
+       El nombre de la tabla ("Movies")
+
+       El esquema de mapeo de tu clase Movie (TableSchema.fromBean(Movie.class)), que usa las anotaciones como @DynamoDbPartitionKey, @DynamoDbAttribute, etc.
+
+
+
+
