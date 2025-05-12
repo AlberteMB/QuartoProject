@@ -21,7 +21,7 @@ website:
           - text: "Relationships"
             href: 01-spring-boot/relationship.qmd  
           - text: "Classes"
-            href: 01-spring-boot/classes.qmd  
+            href: 01-spring-boot/classes.qmd           
       - text: "React"   
         contents:  
           - text: "Introduction"
@@ -87,7 +87,15 @@ website:
       - text: "Vaadin"
         contents:
         - text: "Introduction"
-          href: 10-vaadin/index.qmd      
+          href: 10-vaadin/index.qmd     
+      - text: "Security"
+        contents:
+        - text: "Introduction" 
+          href: 11-security/index.qmd
+        - text: "Cognito AWS"
+          href: 11-security/cognito-aws.qmd   
+        - text: "JWT"
+          href: 11-security/jwt.qmd      
       - text: "Cheat Sheet"
         href: cheatSheet.qmd
       - text: "Notes"

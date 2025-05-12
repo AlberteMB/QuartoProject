@@ -1,0 +1,6 @@
+# Authentication
+
+## 3 Optiones:
+- Security JAVA Starter
+- Cognito AWS
+- Cognito AWS + JWT-verify
