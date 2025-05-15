@@ -1,4 +1,123 @@
 # Dynamo DB
+
+## 📌 ¿Qué es DynamoDB?
+
+**Amazon DynamoDB** es una base de datos NoSQL completamente gestionada por AWS. Está diseñada para aplicaciones que requieren baja latencia y alta escalabilidad, ideal para cargas de trabajo como catálogos de productos, juegos en tiempo real, IoT o cualquier aplicación web moderna.
+
+---
+
+## 🧠 Características clave
+
+- 🔄 **Totalmente gestionada:** No necesitas administrar servidores ni almacenamiento.
+- ⚡ **Baja latencia:** Respuestas rápidas en milisegundos.
+- 🚀 **Escalabilidad automática:** Se adapta al volumen de datos y tráfico.
+- 💾 **Flexible:** No requiere esquemas fijos; ideal para datos semiestructurados.
+- 🛡️ **Alta disponibilidad:** Replicación automática en múltiples zonas de disponibilidad.
+- 🔐 **Seguridad:** Integración con IAM, cifrado en reposo y en tránsito.
+
+---
+
+## 🧱 Estructura básica de DynamoDB
+
+| Componente         | Descripción |
+|--------------------|-------------|
+| **Tabla**          | Agrupación de ítems (como una tabla SQL, pero sin columnas fijas). |
+| **Ítem (Item)**    | Equivalente a una fila en SQL. Cada ítem es un objeto JSON. |
+| **Atributo**       | Equivalente a una columna, pero no necesitas que todos los ítems tengan los mismos atributos. |
+| **Clave primaria** | Necesaria para identificar ítems de forma única. Puede ser: |
+| - Clave de partición (**hash key**) |
+| - Clave de partición + clave de ordenación (**range key**) |
+
+---
+
+## 🔍 Modelo de datos
+
+```json
+{
+  "userId": "123",
+  "movieId": "456",
+  "rating": 5,
+  "watched": true,
+  "tags": ["thriller", "2020s"]
+}
+```
+
+- En este ejemplo, `userId` podría ser la **partition key** y `movieId` la **sort key**.
+
+---
+
+## 🛠️ Operaciones comunes (API)
+
+| Acción       | Descripción |
+|--------------|-------------|
+| `PutItem`    | Inserta o reemplaza un ítem. |
+| `GetItem`    | Recupera un ítem por su clave primaria. |
+| `UpdateItem` | Modifica atributos específicos de un ítem. |
+| `DeleteItem` | Elimina un ítem. |
+| `Query`      | Consulta ítems por clave de partición y sort key. |
+| `Scan`       | Lee todos los ítems de una tabla (costosa, úsala con cuidado). |
+
+---
+
+## ⚙️ Tipos de índices
+
+- 🔑 **Índice global secundario (GSI):** Te permite consultar usando otros atributos como claves.
+- 🔂 **Índice local secundario (LSI):** Usa la misma partition key pero distinta sort key.
+
+---
+
+## 📏 Buenas prácticas
+
+1. **Modela según patrones de acceso**, no como una base de datos relacional.
+2. Usa `Query` en lugar de `Scan` siempre que sea posible.
+3. Limita el uso de GSIs innecesarios.
+4. Aprovecha la consistencia eventual o fuerte según lo necesites.
+5. Usa **provisionamiento automático** o **modo on-demand** según tu caso.
+
+---
+
+## 🚀 Desplegar con AWS CLI
+
+```bash
+aws dynamodb create-table \
+  --table-name Movies \
+  --attribute-definitions AttributeName=movieId,AttributeType=S \
+  --key-schema AttributeName=movieId,KeyType=HASH \
+  --billing-mode PAYPERREQUEST \
+  --region eu-west-1
+```
+
+---
+
+## 📂 Cargar datos desde Bash
+
+```bash
+aws dynamodb put-item \
+  --table-name Movies \
+  --item file://movie.json \
+  --region eu-west-1
+```
+
+Ejemplo de `movie.json`:
+
+```json
+{
+  "movieId": {"S": "001"},
+  "title": {"S": "Inception"},
+  "year": {"N": "2010"},
+  "genres": {"SS": ["Sci-Fi", "Thriller"]}
+}
+```
+
+---
+
+## 📚 Recursos útiles
+
+- [Documentación oficial](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+- [Patrones de diseño DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-general-nosql-design.html)
+- [Modelado NoSQL en DynamoDB](https://www.youtube.com/watch?v=HaEPXoXVf2k)
+
+
 ## Config de Dynamo DB en Vaadin.
 - Dependencia SDK, config y credenciales.
 

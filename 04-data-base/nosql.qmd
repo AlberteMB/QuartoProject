@@ -29,3 +29,19 @@
 - **Sort Key**: Defines the type of item: `BOOK`, `MAGAZINE`, `DVD`, etc.
 - **Attributes**: Additional columns like Title, Author/Editor, Year, Genre, and ISBN/ISSN.
 
+---
+
+## Data Structure
+- Tipos de request:
+    - Read/Write
+    - Concurrencia (mucho flujo o poco)
+    - Real time? (500ms o menos)
+    - Operaciones batch (operaciones masivas) o atómicas
+
+- Escalabilidad + flexibilidad
+- Tamaño y dinero.
+
+### Consejos de mejora para estructura de datos
+- Encontrar necesidades core
+- Iterar semanalmente 
+- Herramientas para implementar

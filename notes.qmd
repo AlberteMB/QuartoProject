@@ -214,9 +214,13 @@ bookserviceProvider (p)
 { Filtered.map() }
 </>
 
+---
+
 ## Semana 16
 
 - DAX : Redis de Dynamo DB.
+
+---
 
 ## Semana 18
 
@@ -225,7 +229,9 @@ bookserviceProvider (p)
 - Method reference: Ejemplo: (movie::add)
 - Clase anónima en lugar de arrow function???
 
+---
 
+## Semana 19
 
-
-
+- B-Tree
+- 

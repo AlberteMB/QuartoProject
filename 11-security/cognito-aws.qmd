@@ -1,2 +1,125 @@
 # Cognito AWS
-- 
+
+## 📌 ¿Qué es Cognito?
+
+**Amazon Cognito** es un servicio de AWS que permite manejar la **autenticación, autorización y gestión de usuarios** para aplicaciones móviles y web.
+
+Con Cognito puedes:
+
+- Registrar/iniciar sesión usuarios (usuarios propios o federados).
+- Autenticarlos con correo, teléfono, redes sociales o proveedores externos.
+- Manejar sesiones, tokens y renovaciones.
+- Controlar el acceso a recursos mediante políticas (IAM, API Gateway, etc.).
+
+---
+
+## 🧱 Componentes principales
+
+| Componente             | Descripción |
+|------------------------|-------------|
+| **User Pool**          | Base de datos de usuarios gestionada por Cognito. Maneja el registro, login, recuperación de contraseña, MFA, etc. |
+| **Identity Pool**      | Proporciona credenciales temporales de AWS (IAM) para acceder a otros servicios. Integra con User Pools o terceros. |
+| **Federated Identities** | Permite loguearse con Google, Facebook, Apple, SAML, etc., además de los usuarios del User Pool. |
+
+---
+
+## 👤 User Pool: flujo típico
+
+1. **Registro del usuario:** Correo, teléfono u otros atributos.
+2. **Confirmación (opcional):** Código por email/SMS.
+3. **Login:** Se valida el usuario y contraseña.
+4. **Tokens:** Se generan tokens JWT (`id_token`, `access_token`, `refresh_token`).
+5. **Autorización:** Usas el `access_token` para acceder a recursos protegidos.
+
+---
+
+## 🔐 Tipos de tokens
+
+| Token           | Uso |
+|------------------|-----|
+| `id_token`       | Información del usuario autenticado (como nombre o email). |
+| `access_token`   | Usado para acceder a APIs autorizadas. |
+| `refresh_token`  | Permite obtener nuevos tokens sin volver a iniciar sesión. |
+
+---
+
+## 🛠️ Operaciones comunes (API / SDK)
+
+| Acción               | Descripción |
+|----------------------|-------------|
+| `SignUp`             | Registra un nuevo usuario. |
+| `ConfirmSignUp`      | Confirma el registro mediante un código. |
+| `SignIn`             | Autentica al usuario y devuelve los tokens. |
+| `ForgotPassword`     | Inicia proceso de recuperación. |
+| `ConfirmForgotPassword` | Restablece la contraseña. |
+| `GetUser`            | Recupera los atributos del usuario autenticado. |
+
+---
+
+## 🧪 Ejemplo de flujo con AWS CLI
+
+```bash
+# Registro de usuario
+aws cognito-idp sign-up \
+  --client-id YOUR_APP_CLIENT_ID \
+  --username alberte@example.com \
+  --password 'ContraseñaSegura123!' \
+  --user-attributes Name=email,Value=alberte@example.com
+
+# Confirmación del usuario
+aws cognito-idp confirm-sign-up \
+  --client-id YOUR_APP_CLIENT_ID \
+  --username alberte@example.com \
+  --confirmation-code 123456
+```
+
+---
+
+## 🧩 Identity Pool
+
+- Se usa para obtener **credenciales temporales de AWS** una vez que el usuario está autenticado.
+- Puede funcionar con:
+  - Cognito User Pools
+  - Proveedores sociales (Google, Facebook)
+  - SAML
+  - Proveedores personalizados (OpenID)
+
+---
+
+## ⚙️ Integración típica
+
+- **Frontend (React, Angular, etc.):** Se autentica con Cognito y almacena los tokens JWT.
+- **Backend (API REST o GraphQL):** Valida el token (`access_token`) para permitir o denegar acceso.
+- **Otros servicios de AWS:** Se accede con permisos IAM temporales vía Identity Pool.
+
+---
+
+## 🔐 Seguridad
+
+- Soporte para **MFA** (autenticación multifactor).
+- Reglas de complejidad de contraseñas.
+- Validación de correo y teléfono.
+- Bloqueo automático tras intentos fallidos.
+
+---
+
+## 📦 Librerías útiles
+
+| Lenguaje/Framework | Librería recomendada |
+|--------------------|----------------------|
+| JavaScript/TypeScript | `amazon-cognito-identity-js` |
+| Java/Kotlin (Spring) | `aws-java-sdk-cognitoidp` |
+| Python (Flask, Django) | `boto3` |
+| Mobile (iOS/Android) | AWS Amplify, SDKs nativos |
+
+---
+
+## 📚 Recursos útiles
+
+- [Documentación oficial de Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
+- [Introducción a Cognito en YouTube (AWS)](https://www.youtube.com/watch?v=5pXwTtvz6mU)
+- [Ejemplo con Spring Boot + Cognito](https://github.com/aws-samples/amazon-cognito-idp-java-spring-boot)
+
+---
+
+¿Quieres que esta guía esté orientada directamente a tu proyecto Film Advisor y el stack que usas?
