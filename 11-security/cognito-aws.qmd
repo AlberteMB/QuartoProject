@@ -103,23 +103,14 @@ aws cognito-idp confirm-sign-up \
 
 ---
 
-## 📦 Librerías útiles
+## AUTH
 
-| Lenguaje/Framework | Librería recomendada |
-|--------------------|----------------------|
-| JavaScript/TypeScript | `amazon-cognito-identity-js` |
-| Java/Kotlin (Spring) | `aws-java-sdk-cognitoidp` |
-| Python (Flask, Django) | `boto3` |
-| Mobile (iOS/Android) | AWS Amplify, SDKs nativos |
+### Hosted UI
+- Listo para usar.
+- Hay que vigilar las URL, porque te autentifica el servidor y todo va a la nube.
+- **useAuth:** Crea context customizado, provider. *Librearía OIDC*.
+  - **Librería OIDC:** Instalar para trabajar con Cognito. *react-oidc-client y react-oidc-context*.
 
----
-
-## 📚 Recursos útiles
-
-- [Documentación oficial de Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
-- [Introducción a Cognito en YouTube (AWS)](https://www.youtube.com/watch?v=5pXwTtvz6mU)
-- [Ejemplo con Spring Boot + Cognito](https://github.com/aws-samples/amazon-cognito-idp-java-spring-boot)
-
----
-
-¿Quieres que esta guía esté orientada directamente a tu proyecto Film Advisor y el stack que usas?
+### Custom UI
+- Programable con SDK
+- Adaptable al proyecto y total control sobre él.

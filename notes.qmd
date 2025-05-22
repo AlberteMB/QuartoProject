@@ -234,4 +234,46 @@ bookserviceProvider (p)
 ## Semana 19
 
 - B-Tree
-- 
+
+- Para la semana:
+    - Data flow
+    - Code
+    - GUI AWS
+
+- Vocabulario básico    
+    - Diferencia entre User pool y Identiti Pool. (Nos limitamos a User Pool)
+
+- Arquitecturas de Cognito: Acces backend resources with user pool tokens.
+
+---
+
+## Semana 20
+
+### Keywords
+
+- **Mappear:** Convierte o transforma cada elemento de una colección con otro valor, creando una nueva estructura a partir de la original. *Más atención en la estructura. Importancia al tipo de objeto*
+
+- **Parsear:** Analizar info de una cadena de datos convirtiendo a una estructura más manejable. Cambiar de formato o tipo. *Más atención en el contenido. Imporntacia al tipo de dato.*
+
+- **Iterar:** Repetir una acción o conjunto de instrucciones.
+
+- **Encriptar:** Transformar en formato cifrado.
+
+- **Codificar:** Traducir info o instrucciones.
+
+- **Validar/Verificar:** Comprobar que los datos cumplen cierto criterio.
+
+*En relación a las keywords anteriores, qué papel tiene Axios?*
+
+- **AXIOS:** Serialización. 
+
+- **Serializar/Deserializar:** 
+
+- **Empaquetar:** 
+
+---
+
+### URI/URL
+- **URI:** Identifyer. parte de la URL
+- **URL:** Locator. Dónde encontramos algo. *Protocolos + Host + Path ...*
+
