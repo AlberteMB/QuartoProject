@@ -109,7 +109,7 @@ aws cognito-idp confirm-sign-up \
 - Listo para usar.
 - Hay que vigilar las URL, porque te autentifica el servidor y todo va a la nube.
 - **useAuth:** Crea context customizado, provider. *Librearía OIDC*.
-  - **Librería OIDC:** Instalar para trabajar con Cognito. *react-oidc-client y react-oidc-context*.
+- **Librería OIDC:** Instalar para trabajar con Cognito. *react-oidc-client y react-oidc-context*.
 
 ### Custom UI
 - Programable con SDK
