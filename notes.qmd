@@ -279,7 +279,18 @@ bookserviceProvider (p)
 
 ---
 
-## Semana 21
+## Semana 22
 
-- AUTH: 
+- Next.js
+    0. Fullstack JavaScript --> Node.js
+    1. Flexible & Adaptable ('use client', 'use server')
+    2. SSK vs CSK
+    3. Router
+
+- 5 puntos que resuelve React en App web?
+    - APIs
+    - BL
+    - Render
+    - Data model
+    - Navigation    
 
